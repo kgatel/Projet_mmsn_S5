@@ -1,12 +1,12 @@
 program gradient
 
-integer,parameter::n=2
+integer,parameter::n=4
 double precision,dimension(n)::x,r,b,p,x0
 double precision,dimension(n,n)::A
-double precision::tol=1.d-10,alpha,beta
+double precision::tol,alpha,beta
 integer::i=1
 
-read (*,*) x0, b, A
+read (*,*) x0, b, tol, A
 x=x0
 r=matmul(A,x)-b
 p=r

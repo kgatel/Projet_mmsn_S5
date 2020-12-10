@@ -4,7 +4,7 @@ program gradient
         integer,parameter::imax=100
         double precision,dimension(:), ALLOCATABLE ::x,r,b,p,x0
         double precision,dimension(:,:), ALLOCATABLE ::A
-        double precision::tol,alpha,beta, cond_A,deltax,erreur,norme_r
+        double precision::tol,alpha,beta, cond_A,delta_x,erreur,norme_r
         integer::i=1
 
         read (*,*) n
@@ -20,17 +20,17 @@ program gradient
         p=r
         
         print*,'suite de vecteurs x0 et le n°d''itération :'
-        do while (((maxval(ABS(r)))>=maxval(b)*tol).AND.(i<=imax))
+        do while (((maxval(ABS(r)))>=maxval(ABS(b))*tol).AND.(i<=imax))
                 alpha=(dot_product(r,r))/(dot_product(matmul(A,p),p))
                 x=x-alpha*p
                 r=r-alpha*matmul(A,p)
-                beta=(dot_product(r,r))/alpha*(dot_product(matmul(A,p),p))
+                beta=dot_product(r,r)/(alpha*(dot_product(matmul(A,p),p)))
                 p=r+beta*p
                 write (*,*) i, x
                 i=i+1
         end do
-        deltax=maxval(x-1)
-        erreur=deltax/maxval(x)
+        delta_x=maxval(ABS(x-1))
+        erreur=delta_x/maxval(x)
         print*, 'imax = '
         write (*,*) imax
         print*, 'A = '

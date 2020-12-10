@@ -1,24 +1,55 @@
 program gradient
 
-integer,parameter::n=4
-double precision,dimension(n)::x,r,b,p,x0
-double precision,dimension(n,n)::A
-double precision::tol,alpha,beta
+integer::n
+integer,parameter::imax=100
+double precision,dimension(:), ALLOCATABLE ::x,r,b,p,x0
+double precision,dimension(:,:), ALLOCATABLE ::A
+double precision::tol,alpha,beta, cond_A,deltax,erreur
 integer::i=1
 
-read (*,*) x0, b, tol, A
+read (*,*) n
+ALLOCATE(A(n,n))
+ALLOCATE (x(n))
+ALLOCATE (r(n))
+ALLOCATE (b(n))
+ALLOCATE (p(n))
+ALLOCATE (x0(n))
+read (*,*) x0, b, tol, A, cond_A
 x=x0
 r=matmul(A,x)-b
 p=r
 
-do while (maxval(r)>=tol)
+print*,'suite de vecteurs x0 et le n°d''itération :'
+do while ((ABS((maxval(r)))>=maxval(b)*tol).AND.(i<=imax))
 alpha=(dot_product(r,r))/(dot_product(matmul(A,p),p))
 x=x-alpha*p
 r=r-alpha*matmul(A,p)
 beta=(dot_product(r,r))/alpha*(dot_product(matmul(A,p),p))
 p=r+beta*p
-write (*,*) i, r
+write (*,*) i, x
 i=i+1
 end do
-write (*,*) x
+deltax=maxval(x-1)
+erreur=deltax/maxval(x)
+print*, 'imax = '
+write (*,*) imax
+print*, 'A = '
+write (*,*) A
+print*, 'b = '
+write (*,*) b
+print*, 'tol = '
+write (*,*) tol
+print*, 'cond = '
+write (*,*) cond_A
+print*, 'estimation de l''erreur relative :'
+write(*,*) erreur
+
+
+DEALLOCATE(A)
+DEALLOCATE(x)
+DEALLOCATE(r)
+DEALLOCATE(b)
+DEALLOCATE(p)
+DEALLOCATE(x0)
+
 end program gradient

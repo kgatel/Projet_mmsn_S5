@@ -1,2 +1,6 @@
-# Projet_Mmsn
-
+ - Caractéristiques des deux machines (marques, modèle, procésseur, architecture)
+ - Système d'exploitation/environnement
+ - Compilateur (version)
+ - Explication la nomenclature des fichiers (1 répertoire pour chaque ordinateur) 
+ - Explication des fichiers de données et résultats
+ - test d'arrêt

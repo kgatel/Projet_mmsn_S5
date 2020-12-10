@@ -5,7 +5,7 @@ program gradient
         double precision,dimension(:), ALLOCATABLE ::x,r,b,p,x0
         double precision,dimension(:,:), ALLOCATABLE ::A
         double precision::tol,alpha,beta, cond_A,delta_x,erreur,norme_r
-        integer::i=1
+        integer::i=1,j
 
         read (*,*) n
         ALLOCATE(A(n,n))
@@ -34,7 +34,9 @@ program gradient
         print*, 'imax = '
         write (*,*) imax
         print*, 'A = '
-        write (*,*) A
+        do i=1,n
+        	write(*,*) (A(i,j),j=1,n)
+        enddo
         print*, 'b = '
         write (*,*) b
         print*, 'tol = '

@@ -18,7 +18,16 @@ program gradient
         x=x0
         r=matmul(A,x)-b
         p=r
-        
+        print*, 'A = '
+        do i=1,n
+        	write(*,*) (A(i,j),j=1,n)
+        enddo
+        print*, 'b = '
+        write (*,*) b
+        print*, 'tol = '
+        write (*,*) tol
+        print*, 'cond = '
+        write (*,*) cond_A  
         print*,'suite de vecteurs x0 et le n°d''itération :'
         do while (((maxval(ABS(r)))>=tol).AND.(i<=imax))
                 alpha=(dot_product(r,r))/(dot_product(matmul(A,p),p))
@@ -32,17 +41,7 @@ program gradient
         delta_x=maxval(ABS(x-1))
         erreur=delta_x/maxval(x)
         print*, 'imax = '
-        write (*,*) imax
-        print*, 'A = '
-        do i=1,n
-        	write(*,*) (A(i,j),j=1,n)
-        enddo
-        print*, 'b = '
-        write (*,*) b
-        print*, 'tol = '
-        write (*,*) tol
-        print*, 'cond = '
-        write (*,*) cond_A
+        write (*,*) imax        
         print*, 'estimation de l''erreur relative :'
         write(*,*) erreur
 

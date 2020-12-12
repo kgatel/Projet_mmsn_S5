@@ -14,7 +14,7 @@ program gradient
         ALLOCATE (b(n))
         ALLOCATE (p(n))
         ALLOCATE (x0(n))
-        read (*,*) A,b,cond_A,tol,x0
+        read (*,*) A,b,tol,cond_A,x0
         x=x0
         r=matmul(A,x)-b
         p=r

@@ -24,7 +24,7 @@ program gradient
         enddo
         print*, 'b = '
         write (*,*) b
-        print*, 'imax = '
+        print*, 'Nmax = '
         write (*,*) imax     
         print*, 'tol = '
         write (*,*) tol

@@ -8,6 +8,9 @@ gradient : gradient_t1.f90
 gradient2 : gradient_t2.f90
 	$(FC) $(OPT) gradient_t2.f90 -o gradient2
 
+gradientper : gradient_perturbation.f90
+	$(FC) $(OPT) gradient_perturbation.f90 -o gradientper
+
 res1 : gradient dgradient
 	gradient < dgradient > res1
 	
@@ -18,4 +21,7 @@ touch :
 	touch res
 
 clean :
-	rm gradient gradient2 *.d
+	rm gradient gradient2 gradientper *.d
+
+
+

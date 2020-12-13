@@ -4,7 +4,7 @@ program gradient
         integer,parameter::imax=100
         double precision,dimension(:), ALLOCATABLE ::x,r,b,p,x0
         double precision,dimension(:,:), ALLOCATABLE ::A
-        double precision::tol,alpha,beta, cond_A,delta_x,erreur,norme_r
+        double precision::tol,alpha,beta, cond_A,delta_x,erreur
         integer::i=1,j
 
         read (*,*) n
@@ -45,7 +45,7 @@ program gradient
                 i=i+1
         end do
         delta_x=maxval(ABS(x-1))
-        erreur=delta_x/maxval(x) 
+        erreur=delta_x/maxval(ABS(x)) 
         print*, 'estimation de l''erreur relative :'
         write(*,*) erreur
 

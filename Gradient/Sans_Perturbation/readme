@@ -1,0 +1,19 @@
+dgradient=fichier de donnée :
+ - dimension
+ - A
+ - b
+ - tolérance
+ - conditionnement infini
+ - x0
+
+"make res1" ou "make res2" pour obtenir le fichier resultat pour le test 1 ou 2.
+
+res1 ou res2 = fichiers résultats :
+ - A
+ - b
+ - Nmax
+ - tolérance
+ - conditionnement infini
+ - x0
+ - suite de vecteurs xN
+ - erreur relative

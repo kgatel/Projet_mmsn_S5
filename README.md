@@ -10,14 +10,14 @@ Compilateur :
   gcc/gfortran version 9.3.0 (Ubuntu 9.3.0-17ubuntu1~20.04)
 
 
-Nomenclature des fichiers :
-  - Fichiersdonnées rassemble l'ensemble des fichiers de données
+Nomenclature des répertoires :
+  - Le répertoire "Fichiersdonnées" rassemble l'ensemble des fichiers de données
   - Gradient comprend deux algorithmes du gradient conjugué avec des tests d'arrêts différents
-  - M1 et M2 qui contiennent l'ensemble des fichiers résultats des deux membres du binôme
+  - m1 et m2 qui contiennent l'ensemble des fichiers résultats des deux membres du binôme
   - Matrices qui contient l'ensemble des matrices A étudiées
 
  
-Corps des fichiers de données :
+Contenu des fichiers de données :
   - Dimension de la matrice
   - Matrice
   - Second membre
@@ -27,7 +27,7 @@ Corps des fichiers de données :
   - x0
 
 
-Corps des fichiers de résultats :
+Contenu des fichiers de résultats :
   - Les variables sont explicitement définies dans ces derniers
   
   
@@ -37,9 +37,9 @@ Tests d'arrêt :
 
 
 Nom des fichiers :
-  - diff pour la matrice (jsp comment elle s appelle)
-  - lap pour la matrice Laplacienne
-  - tri_alpha la matrice tridiagonale de paramètre alpha
+  - dif_n pour la matrice de dimension n associé aux problèmes de diffusion 1D
+  - lap_n pour la matrice Laplacienne problèmes de diffusion 2D
+  - tri_alpha_n la matrice tridiagonale de paramètre alpha
   - elecmodif pour la matrice (jsp comment elle s appelle)
   
 ****** Cas où la dimension est spécifiée *******
@@ -55,6 +55,6 @@ Commande sur le shell script grace au Makefile
   - "make res1" -> execute l'algorithme t1 en prenant en entrée le fichier dgradient. Les résultats sont stockés dans le fichier res1
   - "make res2" -> même chose mais les résultats sont stockés dans res2
   - "make H" -> génère une matrice de Hilbert dans le fichier H de dimension spécifiée dans le fichier dim
-  - "make diff" -> génère une matrice de ? dans le fichier diff de dimension spécifiée dans le fichier dim
+  - "make dif" -> génère une matrice de ? dans le fichier dif de dimension spécifiée dans le fichier dim
   - "make lap" -> génère une matrice Laplacienne dans le fichier lap de dimension spécifiée dans le fichier dim
   - "make tri_alpha" -> génère une matrice tridiagonale de paramètre alpha dans le fichier tri_alpha de dimension spécifiée dans le fichier dim_et_alpha

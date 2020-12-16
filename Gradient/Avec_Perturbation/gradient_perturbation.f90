@@ -23,11 +23,11 @@ program gradient
         p=r
         print*, 'A = '
         do i=1,n
-        	write(*,*) (A(i,j),j=1,n)
+                write(*,*) (A(i,j),j=1,n)
         enddo
         print*, 'delta_A = '
         do i=1,n
-        	write(*,*) (delta_A(i,j),j=1,n)
+                write(*,*) (delta_A(i,j),j=1,n)
         enddo
         print*, 'b = '
         write (*,*) b
@@ -55,16 +55,16 @@ program gradient
         erreur=delta_x/maxval(x) 
         print*, 'estimation de l''erreur relative :'
         write(*,*) erreur
-	delA=maxval(ABS(delta_A))/maxval(ABS(A))  ! delA/A correspond à la norme infini de delta A sur la norme infini de A
-	print*, 'norme infini de delta A sur la norme infini de A :'
-	write(*,*) delA
-	print*, 'second membre de l''inégalité du conditionnement :'
-	write(*,*) cond_A*delA
-	if (erreur<=cond_A*delA) then
-		print*,'l''inégalité du conditionnement est respectée'
-	else
-		print*,'l''inégalité du conditionnement n''est pas respectée'
-	end if	
+        delA=maxval(ABS(delta_A))/maxval(ABS(A))  ! delA correspond à la norme infini de delta A sur la norme infini de A
+        print*, 'norme infini de delta A sur la norme infini de A :'
+        write(*,*) delA
+        print*, 'second membre de l''inégalité du conditionnement :'
+        write(*,*) cond_A*delA
+        if (erreur<=cond_A*delA) then
+                print*,'l''inégalité du conditionnement est respectée'
+        else
+                print*,'l''inégalité du conditionnement n''est pas respectée'
+        end if
 
         DEALLOCATE(A)
         DEALLOCATE(x)
@@ -72,6 +72,6 @@ program gradient
         DEALLOCATE(b)
         DEALLOCATE(p)
         DEALLOCATE(x0)
-	DEALLOCATE(delta_A)
-	DEALLOCATE(A_temp)
+        DEALLOCATE(delta_A)
+        DEALLOCATE(A_temp)
 end program gradient

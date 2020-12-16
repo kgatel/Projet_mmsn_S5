@@ -1,4 +1,4 @@
 Il faut dans le fichier de données mettre la dimension en première ligne
 puis la matrice en dessous.
-En sortie on obtien la dimension la matrice A
+En sortie on obtient la dimension la matrice A
 et la matrice delta_A

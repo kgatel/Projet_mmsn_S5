@@ -11,10 +11,10 @@ Compilateur :
 
 
 Nomenclature des répertoires :
-  - Le répertoire "Fichiersdonnées" rassemble l'ensemble des fichiers de données
-  - Gradient comprend deux algorithmes du gradient conjugué avec des tests d'arrêts différents
-  - m1 et m2 qui contiennent l'ensemble des fichiers résultats des deux membres du binôme
-  - Matrices qui contient l'ensemble des matrices A étudiées
+  - "Fichiersdonnées" rassemble l'ensemble des fichiers de données
+  - "Gradient" comprend deux algorithmes du gradient conjugué avec des tests d'arrêts différents
+  - "m1" et "m2" qui contiennent l'ensemble des fichiers résultats des deux membres du binôme
+  - "Matrices" qui contient l'ensemble des matrices A étudiées
 
  
 Contenu des fichiers de données :
@@ -38,9 +38,10 @@ Tests d'arrêt :
 
 Nom des fichiers :
   - dif_n pour la matrice de dimension n associé aux problèmes de diffusion 1D
-  - lap_n pour la matrice Laplacienne problèmes de diffusion 2D
-  - tri_alpha_n la matrice tridiagonale de paramètre alpha
+  - lap_n pour la matrice de dimension n Laplacienne problèmes de diffusion 2D
+  - tri_alpha_n la matrice de dimension n tridiagonale de paramètre alpha
   - elecmodif pour la matrice (jsp comment elle s appelle)
+  - H_n pour la matrice de Hilbert de dimension n
   
 ****** Cas où la dimension est spécifiée *******
   - H_4_-10_0_0.d = Matrice de Hilbert de dim 4, tolérance 10^-10, perturbation 0, conditionnement 0 (infini), .d pour données

@@ -12,8 +12,14 @@ program delta
 	call srand(tarray(1)+tarray(2)+tarray(3))
 	
 	do i=1,n
-		do j=1,n
+		do j=i,n
 			delta_A(i,j)= (int(rand()*3)-1)*A(i,j)*1.d-14
+		end do
+	end do
+	
+	do i=1,n
+		do j=1,i
+			delta_A(i,j)=delta_A(j,i)
 		end do
 	end do
 	

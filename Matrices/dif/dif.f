@@ -1,7 +1,7 @@
         program diff
         implicit none
         integer i,j,n
-        double precision,dimension(:,:), ALLOCATABLE ::A
+        integer,dimension(:,:), ALLOCATABLE ::A
         double precision,dimension(:), ALLOCATABLE :: b
         double precision somme
 

@@ -13,7 +13,7 @@ program delta
 	
 	do i=1,n
 		do j=i,n
-			delta_A(i,j)= (int(rand()*3)-1)*A(i,j)*1.d-14
+			delta_A(i,j)= (int(rand()*3)-1)*A(i,j)*10.d0**(int(rand()*4)-16)
 		end do
 	end do
 	

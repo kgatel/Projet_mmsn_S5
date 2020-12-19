@@ -56,6 +56,6 @@ Commande sur le shell script grace au Makefile
   - "make res1" -> execute l'algorithme t1 en prenant en entrée le fichier dgradient. Les résultats sont stockés dans le fichier res1
   - "make res2" -> même chose mais les résultats sont stockés dans res2
   - "make H" -> génère une matrice de Hilbert dans le fichier H de dimension spécifiée dans le fichier dim
-  - "make dif" -> génère une matrice de ? dans le fichier dif de dimension spécifiée dans le fichier dim
+  - "make dif" -> génère une matrice dif dans le fichier dif de dimension spécifiée dans le fichier dim
   - "make lap" -> génère une matrice Laplacienne dans le fichier lap de dimension spécifiée dans le fichier dim
   - "make tri_alpha" -> génère une matrice tridiagonale de paramètre alpha dans le fichier tri_alpha de dimension spécifiée dans le fichier dim_et_alpha

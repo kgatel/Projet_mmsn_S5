@@ -1,0 +1,140 @@
+\documentclass[12,french]{report}
+\usepackage{geometry}
+\geometry{vmargin=3cm, hmargin=3cm}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{sectsty}
+\usepackage{authblk}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{xspace}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{tabto}
+
+\usepackage{listings}
+\usepackage{cleveref}
+
+\renewcommand{\lstlistingname}{Code}
+%\renewcommand{\figurename}{Fig.}
+
+\lstdefinestyle{chstyle}{%
+backgroundcolor=\color{gray!12},
+basicstyle=\ttfamily\small,
+showstringspaces=false,
+numbers=left}
+
+%\AddThinSpaceBeforeFootnotes
+%\FrenchFootnotes
+
+\titleformat{\chapter}[hang]{\bf\Huge}{\thechapter.}{2pc}{}
+\titlespacing*{\chapter}{10pt}{0pt}{40pt}[0pt]
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\providecommand{\keywords}[1]{\textbf{\textit{Keywords:}} #1}
+\bibliographystyle{apalike}
+
+\usepackage{hyperref}
+
+\begin{document}
+\hypersetup{pdfborder=0 0 0}
+
+\begin{titlepage}
+
+\begin{center}
+	\vspace*{\stretch{1}}
+	\textsc{{\LARGE Institut national des sciences appliquées de Rouen} \\ 			\vspace{6mm} {\Large INSA de Rouen}} \\
+	\vspace{5mm}
+	\includegraphics[width=0.4\textwidth]{./Images/insa}\\[1.0 cm]
+
+	\textsc{\Large Projet MMSN GM3 - Vague 3 - Sujet 4}\\[0.6cm]
+
+	% Title
+	\HRule \\[0.5cm]
+	{ \Huge \bfseries Résolution de système linéaire par la méthode du gradient conjugué}\\[0.2cm]
+	\HRule \\[0.75cm]
+
+	\includegraphics[width=0.6\textwidth]{./Images/Gradient_conjugué}\\[0.5 cm]
+
+	% Author and supervisor
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft} \large
+			\emph{Auteurs:}\\
+			Thibaut \textsc{André-Gallis} \\
+			{\small\href{mailto:thibaut.andregallis@insa-rouen.fr}{thibaut.andregallis@insa-rouen.fr}} \\
+			Kévin \textsc{Gatel} \\
+			{\small\href{mailto:kevin.gatel@insa-rouen.fr}{kevin.gatel@insa-				rouen.fr}}
+		\end{flushleft}
+	\end{minipage}
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushright} \large
+			\emph{Enseignant:} \\
+			Bernard \textsc{Gleyse} \\
+			{\small\href{mailto:bernard.gleyse@insa-rouen.fr}								{bernard.gleyse@insa-rouen.fr}}
+		\end{flushright}
+	\end{minipage}
+	\vspace*{\stretch{1}}
+
+	\vfill
+	{\large 4 Janvier 2021}
+\end{center}
+\end{titlepage}
+
+\tableofcontents
+
+%\listoffigures
+
+\renewcommand{\chaptername}{}
+\chapter*{Introduction}
+%\label{chapter:Introduction}
+\addcontentsline{toc}{chapter}{Introduction}
+
+m1 m2
+
+\chapter{Présentation du problème}
+
+\section{Principe}
+
+Expliquer le principe du problème
+
+\section{Résolution mathématique}
+
+Expliquer la résolution mathématique du problème (théorème sans démonstrations)
+
+\chapter{Résolution numérique}
+
+\section{Méthode}
+
+Expliquer la méthode numérique utilisée (fortran algo etc)
+
+\section{Résultats}
+
+Convergence des $x_{n}$, convergence des résidus, p.s. des résidus qui forment bien une base, inégalité du conditionnement...
+
+\chapter*{Conclusion}
+\addcontentsline{toc}{chapter}{Conclusion}
+
+Dans la conclusion, vous devez commenter les résultats numériques par rapport á ce que l’on pouvait espérer au vu des résultats théoriques.
+
+\chapter*{Annexes}
+\addcontentsline{toc}{chapter}{Annexe}
+
+les noms de fichiers ( source, données,
+résultats.
+
+\chapter*{Bibliographie}
+\addcontentsline{toc}{chapter}{Bibliographie}
+
+[1] André Draux \textit{Analyse numérique}, poly, chapitre 2 \textit{Les méthodes de descente}.
+
+\end{document}

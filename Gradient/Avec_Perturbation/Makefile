@@ -2,9 +2,12 @@ FC = gfortran
 
 OPT = -g
 
-gradientper : gradient_perturbation.f90
+gradient : gradient_perturbation.f90
 	$(FC) $(OPT) gradient_perturbation.f90 -o gradientper
 
+res : gradientper 
+	 gradientper < dgradient > res
+	
 touch :
 	touch res
 

@@ -3,12 +3,12 @@
 
 Caractéristiques des machines :
   - M1 : Asus Zenbook, Intel® Core™ i5-8265U CPU @ 1.60GHz × 8, 8Go de mémoire, OS Ubuntu 20.04.1 LTS, 64 bits. 
-  - M2 : 
+  - M2 : Asus Zenbook, Intel® Core™ i5-7200U CPU @ 2.50GHz × 4, 4Go de mémoire, OS Ubuntu 20.04.1 LTS, 64 bits 
   
   
 Compilateur :
   gcc/gfortran version 9.3.0 (Ubuntu 9.3.0-17ubuntu1~20.04)
-
+  gcc/gfortran version 9.3.0 (Ubuntu 9.3.0-17ubuntu1~20.04) 
 
 Nomenclature des répertoires :
   - "Fichiersdonnées" rassemble l'ensemble des fichiers de données

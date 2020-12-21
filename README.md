@@ -44,17 +44,21 @@ Nom des fichiers :
   - H_n pour la matrice de Hilbert de dimension n
   
 ****** Cas où la dimension est spécifiée *******
-  - H_4_-10_0_0.d = Matrice de Hilbert de dim 4, tolérance 10^-10, perturbation 0, conditionnement 0 (infini), .d pour données
+  - H_4_-10_0_0.d = Matrice de Hilbert de dim 4, tolérance 10^-10, sans perturbation, conditionnement 0 (infini), .d pour données
   - H_4_-10_0_0_t1_m2.res = Même chose, t1 pour le test d'arrêt 1, m2 pour calculs effectiués sur la machine 2, .res pour résultats
 
 ****** Cas où la dimension n'est pas spécifiée *******
-  - W_-10_0_0.d = Matrice de Wilson, tolérance 10^-10, perturbation 0, conditionnement 0 (infini), .d pour données
+  - W_-10_0_0.d = Matrice de Wilson, tolérance 10^-10, sans perturbation, conditionnement 0 (infini), .d pour données
   - W_-10_0_0_t1_m1.res = Même chose, test d'arret 1, calculs faits sur la machine 1, .res pour fichier résultat
-  
+
+****** Dernier cas *******
+  - tri_2_10_1_0.d = Matrice de dimension 10 tridiagonale de paramètre 2, tolérance 10^-10, AVEC perturbation, conditionnement 0 (infini), .d pour données
+  - tri_2_10_1_0_t1_m1.res = Même chose, test d'arret 1, calculs faits sur la machine 1, .res pour fichier résultat
   
 Commande sur le shell script grace au Makefile
   - "make res1" -> execute l'algorithme t1 en prenant en entrée le fichier dgradient. Les résultats sont stockés dans le fichier res1
   - "make res2" -> même chose mais les résultats sont stockés dans res2
+  - "make res" -> "make res1" et "make res2"
   - "make H" -> génère une matrice de Hilbert dans le fichier H de dimension spécifiée dans le fichier dim
   - "make dif" -> génère une matrice dif dans le fichier dif de dimension spécifiée dans le fichier dim
   - "make lap" -> génère une matrice Laplacienne dans le fichier lap de dimension spécifiée dans le fichier dim

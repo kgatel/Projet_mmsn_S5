@@ -1,6 +1,7 @@
 dgradient=fichier de donnée :
  - dimension
  - A
+ - delta A
  - b
  - tolérance
  - conditionnement infini

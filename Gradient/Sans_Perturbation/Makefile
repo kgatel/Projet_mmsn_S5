@@ -14,6 +14,8 @@ res1 : gradient dgradient
 res2 : gradient2 dgradient
 	gradient2 < dgradient > res2
 
+res : res1 res2
+
 touch :
 	touch res
 

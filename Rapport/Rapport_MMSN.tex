@@ -92,7 +92,7 @@ numbers=left}
 
 \tableofcontents
 
-%\listoffigures
+\listoffigures
 
 \renewcommand{\chaptername}{}
 \chapter*{Introduction}
@@ -135,10 +135,62 @@ Convergence des $x_{n}$, convergence des résidus, p.s. des résidus qui forment
 Dans la conclusion, vous devez commenter les résultats numériques par rapport á ce que l’on pouvait espérer au vu des résultats théoriques.
 
 \chapter*{Annexes}
-\addcontentsline{toc}{chapter}{Annexe}
+\addcontentsline{toc}{chapter}{Annexes}
+\addcontentsline{lof}{chapter}{Annexes}
+\begin{figure}[H]
+    \begin{minipage}[c]{.46\linewidth}
+        \centering
+        \includegraphics[width=0.5\textwidth]{./Images/elec}\\
+        \caption*{Matrice elec}
+        \addcontentsline{lof}{section}{Matrice elec}
+    \end{minipage}
+    \hfill%
+    \begin{minipage}[c]{.46\linewidth}
+        \centering
+        \includegraphics[width=0.5\textwidth]{./Images/elecmodif}\\
+        \caption*{Matrice elecmodif}
+        \addcontentsline{lof}{section}{Matrice elecmodif}
+    \end{minipage}
+\end{figure}%\vspace{0.1cm}
 
-les noms de fichiers ( source, données,
-résultats.
+\begin{figure}[H]
+    \begin{minipage}[c]{.46\linewidth}
+        \centering
+        \includegraphics[width=1\textwidth]{./Images/dif_8}\\
+        \caption*{Matrice dif de dim 8}
+        \addcontentsline{lof}{section}{Matrice dif de dim 8}
+    \end{minipage}
+    \hfill%
+    \begin{minipage}[c]{.46\linewidth}
+        \centering
+        \includegraphics[width=0.6\textwidth]{./Images/H_5}\\
+        \caption*{Matrice de Hilbert de dim 5}
+        \addcontentsline{lof}{section}{Matrice de Hilbert de dim 5}
+    \end{minipage}
+\end{figure}%\vspace{0.1cm}
+
+\begin{figure}[H]
+    \begin{minipage}[c]{.46\linewidth}
+        \centering
+        \includegraphics[width=0.9\textwidth]{./Images/lap_3}\\
+        \caption*{Matrice Laplacienne\_3 (de dim $3^{2}$)}
+        \addcontentsline{lof}{section}{Matrice Laplacienne\_3 (de dim $3^{2}$)}
+    \end{minipage}
+    \hfill%
+    \begin{minipage}[c]{.46\linewidth}
+        \centering
+        \includegraphics[width=0.6\textwidth]{./Images/tri_5_10}\\
+        \caption*{Matrice tri\_$\alpha$ de dim 10 avec $\alpha=5$ }
+        \addcontentsline{lof}{section}{Matrice tri\_$\alpha$ de dim 10 avec $\alpha=5$}
+    \end{minipage}
+\end{figure}%\vspace{0.1cm}
+
+\begin{figure}[H]
+	\center
+	\includegraphics[width=0.17\textwidth]{./Images/W}
+	\caption*{Matrice de Wilson}
+	\addcontentsline{lof}{section}{Matrice de Wilson}
+\end{figure}
 
 \chapter*{Bibliographie}
 \addcontentsline{toc}{chapter}{Bibliographie}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.11.3)  22 DEC 2020 22:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.11.3)  24 DEC 2020 01:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -473,10 +473,26 @@ Package: tabto 2018/12/28  v 1.4  Another tabbing mechanism
 \CurrentLineWidth=\dimen189
 \TabPrevPos=\dimen190
 )
+(/usr/share/texlive/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write3
+
+Excluding comment 'comment')
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2017/10/31 v2.20.4
+\thm@style=\toks29
+\thm@bodyfont=\toks30
+\thm@headfont=\toks31
+\thm@notefont=\toks32
+\thm@headpunct=\toks33
+\thm@preskip=\skip65
+\thm@postskip=\skip66
+\thm@headsep=\skip67
+\dth@everypar=\toks34
+)
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count298
 \lst@gtempboxa=\box51
-\lst@token=\toks29
+\lst@token=\toks35
 \lst@length=\count299
 \lst@currlwidth=\dimen191
 \lst@column=\count300
@@ -511,12 +527,16 @@ LaTeX Info: Redefining \cpagerefrange on input line 2370.
 LaTeX Info: Redefining \Cpagerefrange on input line 2370.
 LaTeX Info: Redefining \labelcref on input line 2370.
 LaTeX Info: Redefining \labelcpageref on input line 2370.
+Package cleveref Info: `amsthm' support loaded on input line 3026.
 Package cleveref Info: `algorithmicx' support loaded on input line 3120.
 Package cleveref Info: `listings' support loaded on input line 3131.
 )
+\c@theorem=\count306
+\c@corollary=\count307
+
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count306
+\l__kernel_color_stack_int=\count308
 \l__pdf_internal_box=\box53
 )
 
@@ -526,22 +546,22 @@ LaTeX Warning: Unused global option(s):
 (./Rapport_MMSN.aux)
 \openout1 = `Rapport_MMSN.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -577,28 +597,28 @@ LaTeX Font Info:    ... okay on input line 49.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \degres on input line 49.
-LaTeX Info: Redefining \dots on input line 49.
+LaTeX Info: Redefining \degres on input line 55.
+LaTeX Info: Redefining \dots on input line 55.
 Package french.ldf Info: Setting StandardItemizeEnv=true for
 (french.ldf)             compatibility with enumitem package,
-(french.ldf)             reported on input line 49.
+(french.ldf)             reported on input line 55.
 Package french.ldf Info: Setting StandardEnumerateEnv=true for
 (french.ldf)             compatibility with enumitem package,
-(french.ldf)             reported on input line 49.
-LaTeX Info: Redefining \up on input line 49.
+(french.ldf)             reported on input line 55.
+LaTeX Info: Redefining \up on input line 55.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count307
+\scratchcounter=\count309
 \scratchdimen=\dimen195
 \scratchbox=\box54
-\nofMPsegments=\count308
-\nofMParguments=\count309
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count310
+\nofMPsegments=\count310
+\nofMParguments=\count311
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count312
 \MPscratchDim=\dimen196
-\MPnumerator=\count311
-\makeMPintoPDFobject=\count312
-\everyMPtoPDFconversion=\toks31
+\MPnumerator=\count313
+\makeMPintoPDFobject=\count314
+\everyMPtoPDFconversion=\toks37
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -609,7 +629,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box55
-Package hyperref Info: Link coloring OFF on input line 49.
+Package hyperref Info: Link coloring OFF on input line 55.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -620,44 +640,44 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count313
+\c@section@level=\count315
 )
-LaTeX Info: Redefining \ref on input line 49.
-LaTeX Info: Redefining \pageref on input line 49.
-LaTeX Info: Redefining \nameref on input line 49.
+LaTeX Info: Redefining \ref on input line 55.
+LaTeX Info: Redefining \pageref on input line 55.
+LaTeX Info: Redefining \nameref on input line 55.
 
 (./Rapport_MMSN.out) (./Rapport_MMSN.out)
-\@outlinefile=\write3
-\openout3 = `Rapport_MMSN.out'.
+\@outlinefile=\write4
+\openout4 = `Rapport_MMSN.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count314
-<./Images/insa.jpg, id=52, 602.25pt x 157.58875pt>
+\c@lstlisting=\count316
+<./Images/insa.jpg, id=64, 602.25pt x 157.58875pt>
 File: ./Images/insa.jpg Graphic file (type jpg)
 <use ./Images/insa.jpg>
-Package pdftex.def Info: ./Images/insa.jpg  used on input line 58.
+Package pdftex.def Info: ./Images/insa.jpg  used on input line 64.
 (pdftex.def)             Requested size: 177.42868pt x 46.42815pt.
-<./Images/Gradient_conjugué.png, id=53, 592.2125pt x 472.76625pt>
+<./Images/Gradient_conjugué.png, id=65, 592.2125pt x 472.76625pt>
 File: ./Images/Gradient_conjugué.png Graphic file (type png)
 <use ./Images/Gradient_conjugué.png>
-Package pdftex.def Info: ./Images/Gradient_conjugué.png  used on input line 67
+Package pdftex.def Info: ./Images/Gradient_conjugué.png  used on input line 73
 .
 (pdftex.def)             Requested size: 266.14978pt x 212.47592pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 78.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 84.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 78.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 84.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 78
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 84
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
@@ -668,120 +688,215 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 es/Gradient_conjugué.png>] (./Rapport_MMSN.toc
 Package cleveref Info: loaded `french' language definitions on input line 1.
 )
-\tf@toc=\write4
-\openout4 = `Rapport_MMSN.toc'.
+\tf@toc=\write5
+\openout5 = `Rapport_MMSN.toc'.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.95 \listoffigures
-                    [1
+l.101 \listoffigures
+                     [1
 
 ] (./Rapport_MMSN.lof
 Package cleveref Info: loaded `french' language definitions on input line 1.
 )
-\tf@lof=\write5
-\openout5 = `Rapport_MMSN.lof'.
+\tf@lof=\write6
+\openout6 = `Rapport_MMSN.lof'.
 
  [2
 
-] [3
-
 ]
- 1.
-[4
-
-]
- 2.
-[5
-
-] [6
-
-]
-<./Images/elec.png, id=128, 135.50626pt x 54.2025pt>
-File: ./Images/elec.png Graphic file (type png)
-<use ./Images/elec.png>
-Package pdftex.def Info: ./Images/elec.png  used on input line 143.
-(pdftex.def)             Requested size: 102.02454pt x 40.81139pt.
-<./Images/elecmodif.png, id=130, 144.54pt x 55.20625pt>
-File: ./Images/elecmodif.png Graphic file (type png)
-<use ./Images/elecmodif.png>
-Package pdftex.def Info: ./Images/elecmodif.png  used on input line 150.
-(pdftex.def)             Requested size: 102.02454pt x 38.96758pt.
-<./Images/dif_8.png, id=131, 307.1475pt x 145.54375pt>
-File: ./Images/dif_8.png Graphic file (type png)
-<use ./Images/dif_8.png>
-Package pdftex.def Info: ./Images/dif_8.png  used on input line 159.
-(pdftex.def)             Requested size: 204.04907pt x 96.68987pt.
-<./Images/H_5.png, id=132, 167.62625pt x 174.6525pt>
-File: ./Images/H_5.png Graphic file (type png)
-<use ./Images/H_5.png>
-Package pdftex.def Info: ./Images/H_5.png  used on input line 166.
-(pdftex.def)             Requested size: 122.43068pt x 127.56187pt.
-<./Images/lap_3.png, id=133, 246.9225pt x 166.6225pt>
-File: ./Images/lap_3.png Graphic file (type png)
-<use ./Images/lap_3.png>
-Package pdftex.def Info: ./Images/lap_3.png  used on input line 175.
-(pdftex.def)             Requested size: 183.64291pt x 123.92162pt.
-<./Images/tri_5_10.png, id=134, 186.6975pt x 180.675pt>
-File: ./Images/tri_5_10.png Graphic file (type png)
-<use ./Images/tri_5_10.png>
-Package pdftex.def Info: ./Images/tri_5_10.png  used on input line 182.
-(pdftex.def)             Requested size: 122.43068pt x 118.4822pt.
-<./Images/W.png, id=135, 84.315pt x 71.26625pt>
-File: ./Images/W.png Graphic file (type png)
-<use ./Images/W.png>
-Package pdftex.def Info: ./Images/W.png  used on input line 190.
-(pdftex.def)             Requested size: 75.40752pt x 63.73883pt.
- [7
-
- <./Images/elec.png> <./Images/elecmodif.png> <./Images/dif_8.png> <./Images/H_
-5.png> <./Images/lap_3.png> <./Images/tri_5_10.png> <./Images/W.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 198--199
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 202.
-[8
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
+
+ []
+
+[3
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 202.
+ 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--138
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--146
+
+ []
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 150.
+
+Missing character: There is no � in font cmr7!
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 155.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\alpha' on input line 155.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 155.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 155.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 155.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 155.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 155.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
+
+ []
+
+[4
+
+] [5]
+ 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 193--194
+
+ []
+
+<./Images/Algo1.png, id=152, 195.73125pt x 228.855pt>
+File: ./Images/Algo1.png Graphic file (type png)
+<use ./Images/Algo1.png>
+Package pdftex.def Info: ./Images/Algo1.png  used on input line 199.
+(pdftex.def)             Requested size: 119.76659pt x 140.03435pt.
+<./Images/Algo2.png, id=154, 195.73125pt x 228.855pt>
+File: ./Images/Algo2.png Graphic file (type png)
+<use ./Images/Algo2.png>
+Package pdftex.def Info: ./Images/Algo2.png  used on input line 206.
+(pdftex.def)             Requested size: 119.76659pt x 140.03435pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--212
+
+ []
+
+[6
+
+ <./Images/Algo1.png> <./Images/Algo2.png>] [7
+
+]
+<./Images/elec.png, id=168, 135.50626pt x 54.2025pt>
+File: ./Images/elec.png Graphic file (type png)
+<use ./Images/elec.png>
+Package pdftex.def Info: ./Images/elec.png  used on input line 240.
+(pdftex.def)             Requested size: 102.02454pt x 40.81139pt.
+<./Images/elecmodif.png, id=169, 144.54pt x 55.20625pt>
+File: ./Images/elecmodif.png Graphic file (type png)
+<use ./Images/elecmodif.png>
+Package pdftex.def Info: ./Images/elecmodif.png  used on input line 247.
+(pdftex.def)             Requested size: 102.02454pt x 38.96758pt.
+<./Images/dif_8.png, id=170, 307.1475pt x 145.54375pt>
+File: ./Images/dif_8.png Graphic file (type png)
+<use ./Images/dif_8.png>
+Package pdftex.def Info: ./Images/dif_8.png  used on input line 256.
+(pdftex.def)             Requested size: 204.04907pt x 96.68987pt.
+<./Images/H_5.png, id=171, 167.62625pt x 174.6525pt>
+File: ./Images/H_5.png Graphic file (type png)
+<use ./Images/H_5.png>
+Package pdftex.def Info: ./Images/H_5.png  used on input line 263.
+(pdftex.def)             Requested size: 122.43068pt x 127.56187pt.
+<./Images/lap_3.png, id=172, 246.9225pt x 166.6225pt>
+File: ./Images/lap_3.png Graphic file (type png)
+<use ./Images/lap_3.png>
+Package pdftex.def Info: ./Images/lap_3.png  used on input line 272.
+(pdftex.def)             Requested size: 183.64291pt x 123.92162pt.
+<./Images/tri_5_10.png, id=173, 186.6975pt x 180.675pt>
+File: ./Images/tri_5_10.png Graphic file (type png)
+<use ./Images/tri_5_10.png>
+Package pdftex.def Info: ./Images/tri_5_10.png  used on input line 279.
+(pdftex.def)             Requested size: 122.43068pt x 118.4822pt.
+<./Images/W.png, id=174, 84.315pt x 71.26625pt>
+File: ./Images/W.png Graphic file (type png)
+<use ./Images/W.png>
+Package pdftex.def Info: ./Images/W.png  used on input line 287.
+(pdftex.def)             Requested size: 75.40752pt x 63.73883pt.
+ [8
+
+ <./Images/elec.png> <./Images/elecmodif.png> <./Images/dif_8.png> <./Images/H_
+5.png> <./Images/lap_3.png> <./Images/tri_5_10.png> <./Images/W.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 295--296
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 297--298
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 301.
+[9
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 301.
  (./Rapport_MMSN.aux
 Package cleveref Info: loaded `french' language definitions on input line 25.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 202.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 202.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 301.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 301.
 Package rerunfilecheck Info: File `Rapport_MMSN.out' has not changed.
-(rerunfilecheck)             Checksum: 904C6A1BDA91783115006C2B9465F6EF;699.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 202.
+(rerunfilecheck)             Checksum: DFB7ABF2AB8C6003794486F52F7FF276;1016.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 301.
  ) 
 Here is how much of TeX's memory you used:
- 14779 strings out of 481239
- 233454 string characters out of 5920377
- 559913 words of memory out of 5000000
- 29772 multiletter control sequences out of 15000+600000
- 545533 words of font info for 50 fonts, out of 8000000 for 9000
+ 14948 strings out of 481239
+ 235746 string characters out of 5920377
+ 564089 words of memory out of 5000000
+ 29915 multiletter control sequences out of 15000+600000
+ 550672 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,8n,42p,280b,557s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,8n,42p,580b,578s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf/fonts/type1/public/cm-super/
-sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/s
-hare/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/typ
-e1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/s
-fcc1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1440.pfb></usr/sh
-are/texmf/fonts/type1/public/cm-super/sfcc1728.pfb></usr/share/texmf/fonts/type
-1/public/cm-super/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sf
-rm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/sha
-re/texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf/fonts/type1
-/public/cm-super/sfti1200.pfb>
-Output written on Rapport_MMSN.pdf (9 pages, 284879 bytes).
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/shar
+e/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/
+public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx
+1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share
+/texmf/fonts/type1/public/cm-super/sfcc1000.pfb></usr/share/texmf/fonts/type1/p
+ublic/cm-super/sfcc1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1
+440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1728.pfb></usr/share/
+texmf/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf/fonts/type1/pu
+blic/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm12
+00.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/t
+exmf/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on Rapport_MMSN.pdf (10 pages, 383131 bytes).
 PDF statistics:
- 213 PDF objects out of 1000 (max. 8388607)
- 167 compressed objects within 2 object streams
- 27 named destinations out of 1000 (max. 500000)
- 142 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 279 PDF objects out of 1000 (max. 8388607)
+ 218 compressed objects within 3 object streams
+ 34 named destinations out of 1000 (max. 500000)
+ 176 words of extra memory for PDF output out of 10000 (max. 10000000)
 

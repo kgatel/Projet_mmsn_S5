@@ -1,11 +1,13 @@
 \babel@toc {french}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {chapter}{Annexes}{7}{chapter*.5}%
-\contentsline {section}{Matrice elec}{7}{figure.caption.6}%
-\contentsline {section}{Matrice elecmodif}{7}{figure.caption.6}%
-\contentsline {section}{Matrice dif de dim 8}{7}{figure.caption.7}%
-\contentsline {section}{Matrice de Hilbert de dim 5}{7}{figure.caption.7}%
-\contentsline {section}{Matrice Laplacienne\_3 (de dim $3^{2}$)}{7}{figure.caption.8}%
-\contentsline {section}{Matrice tri\_$\alpha $ de dim 10 avec $\alpha =5$}{7}{figure.caption.8}%
-\contentsline {section}{Matrice de Wilson}{7}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Algorithme du gradient conjugué muni du test d'arrêt \textbf {t1}\relax }}{6}{figure.caption.4}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Algorithme du gradient conjugué muni du test d'arrêt \textbf {t2}\relax }}{6}{figure.caption.4}%
+\contentsline {chapter}{Annexes}{8}{chapter*.6}%
+\contentsline {section}{Matrice elec}{8}{figure.caption.7}%
+\contentsline {section}{Matrice elecmodif}{8}{figure.caption.7}%
+\contentsline {section}{Matrice dif de dim 8}{8}{figure.caption.8}%
+\contentsline {section}{Matrice de Hilbert de dim 5}{8}{figure.caption.8}%
+\contentsline {section}{Matrice Laplacienne\_3 (de dim $3^{2}$)}{8}{figure.caption.9}%
+\contentsline {section}{Matrice tri\_$\alpha $ de dim 10 avec $\alpha =5$}{8}{figure.caption.9}%
+\contentsline {section}{Matrice de Wilson}{8}{figure.caption.10}%

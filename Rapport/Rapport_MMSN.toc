@@ -3,11 +3,14 @@
 \contentsline {chapter}{\numberline {1}Présentation du problème}{4}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Principe}{4}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Résolution mathématique}{4}{section.1.2}%
-\contentsline {chapter}{\numberline {2}Résolution numérique}{5}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Méthode}{5}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Résultats}{5}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Sans perturbation}{5}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Avec perturbation}{5}{subsection.2.2.2}%
-\contentsline {chapter}{Conclusion}{6}{chapter*.4}%
-\contentsline {chapter}{Annexes}{7}{chapter*.5}%
-\contentsline {chapter}{Bibliographie}{8}{chapter*.10}%
+\contentsline {subsection}{\numberline {1.2.1}Choix de la fonctionnelle à minimiser}{4}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Choix optimal de $\alpha _{k}$ dans une direction fixée $p_{k}$}{5}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Méthode du gradient conjugué}{5}{subsection.1.2.3}%
+\contentsline {chapter}{\numberline {2}Résolution numérique}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Algorithmes et langage utilisés}{6}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Résultats obtenus}{6}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Sans perturbation}{6}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Avec perturbation}{6}{subsection.2.2.2}%
+\contentsline {chapter}{Conclusion}{7}{chapter*.5}%
+\contentsline {chapter}{Annexes}{8}{chapter*.6}%
+\contentsline {chapter}{Bibliographie}{9}{chapter*.11}%

@@ -21,9 +21,15 @@
 \usepackage{caption}
 \usepackage{float}
 \usepackage{tabto}
+\usepackage{comment} 
+\usepackage{amsthm}
 
 \usepackage{listings}
 \usepackage{cleveref}
+
+\newtheorem{theorem}{Théorème}[chapter]
+\newtheorem{corollary}{Corollaire}[theorem]
+\newtheorem{lemma}[theorem]{Lemme}
 
 \renewcommand{\lstlistingname}{Code}
 %\renewcommand{\figurename}{Fig.}
@@ -99,25 +105,114 @@ numbers=left}
 %\label{chapter:Introduction}
 \addcontentsline{toc}{chapter}{Introduction}
 
-m1 m2
+La méthode présentée dans ce rapport est celle du gradient conjugué. Il ne s'agit non seulement d'une des techniques les plus utiles pour résoudre des grands systèmes linéaires, mais elle peut même être adaptée de telle manière à ce qu'elle résout des problèmes d'optimisation non-linéaires. Ces deux variantes, reposant sur la même idée de base, sont respectivement appelées méthodes du gradient conjugué linéaire et non-linéaire. Dans la suite nous nous intéresserons uniquement à la méthode du gradient conjugué linéaire.\\
+
+La méthode a été trouvée dans les années 50 par Magnus Hestenes et Eduard Stiefel, deux mathématiciens. Cette dernière se base sur la recherche de directions successives permettant d’atteindre la solution exacte d’un système linéaire de matrice symétrique et définie positive et représente une alternative à l’algorithme d’ élimination de Gauss. Elle est même souvent préférée à cette dernière lorsque les systèmes d’équations sont de grandes tailles.\\
+
+Les résultats obtenus ont été calculés avec deux machines différentes afin d'observer et de discuter des éventuelles différences. Les caractéristiques des deux ordinateurs sont indiquées dans le fichier "README".
+
 
 \chapter{Présentation du problème}
 
 \section{Principe}
 
-Expliquer le principe du problème
+La méthode du gradient conjugué linéaire est une méthode qui résout deux problèmes équivalents
+possédant la même solution unique. Ces problèmes sont le système d’équations linéaires
+$$Ax = b$$
+et le problème de minimisation suivant :
+$$J(x)=(Ax,x)-2(b,x)$$
+
+où A est une matrice carrée symétrique définie positive de taille $n$, $x$ et $b$ deux vecteurs de taille $n$ et (.,.) représente le produit scalaire dans $\mathbb{R}^{n}$.
+
 
 \section{Résolution mathématique}
 
-Expliquer la résolution mathématique du problème (théorème sans démonstrations)
+\subsection{Choix de la fonctionnelle à minimiser}
+La solution $\overline{x}$ du problème $Ax = b$ est le vecteur pour lequel $J(x)$ atteint son minimum. On a l'expression :
+
+$$J(\overline{x})=-(b,A^{-1}b).$$
+
+Posons 
+$$g(x)=2(Ax-b)=-2r(x)$$
+où $r(x)=b-Ax=A\overline{x}-Ax$ est le vecteur résidu du système $Ax = b$.\\
+
+Si on pose $\overline{x}-x=e(x)$, on a :
+$$E(x) = (A e(x), e(x))$$.
+
+Il est équivalent de minimiser $J$ ou $E$ comme définies ci-dessus.\\
+
+Puisque $A$ est symétrique et définie positive, alors $(Ax,y)$ est un produit scalaire et
+$E(x) =	\|e(x)\|_{A}^{2},$ avec $\|e\|_{A}^{2} = (Ae, e)^{\frac{1}{2}}$ norme associée à ce produit scalaire. Le minimum de $E$ est nul et est atteint en $\overline{x}$.\\
+
+$E(x)$ peut aussi s’exprimer en fonction du résidu $r(x) = A\overline{x}-Ax$ :
+$$E(x) = (r(x), A^{-1}r(x)).$$
+
+Pour minimiser la fonctionnelle $E$, les méthodes de descente comme celle du gradient conjugué donnent $x_{k+1}$ à partir de $x_{k}$ en choisissant à la $(k + 1)^{ème}$ itération une direction de descente $p_{k}\neq 0$ (un vecteur de $\mathbb{R}^{n}$) et un scalaire $\alpha_{k}$ avec
+$$x_{k+1} = x_k + \alpha_{k}p_{k}$$
+
+de manière à ce que $E(x_{k}+1 ) < E(x_{k}).$
+
+\subsection{Choix optimal de $\alpha_{k}$ dans une direction fixée $p_{k}$}
+
+On suppose la direction $p_{k}$ fixée.\\
+
+Le choix local optimal de $\alpha_{k}$ est obtenu lorsqu'à chaque itération, on minimise $E(x_{k+1}).$ dans la direction $p_{k}$ :
+$$E(x_{k}+\alpha_{k} p_{k})=\min_{\alpha\in\mathbb{R}}E(x_{k}+\alpha p_{k})$$
+
+Son minimum est atteint pour
+$$\alpha_{k}=\frac{(r_{k},p_{k})}{(Ap_{k},p_{k})}.$$
+
+
+
+\begin{lemma}
+	$\forall p_{k}\neq0$, pour $\alpha_{k}$ optimal local, on a la relation suivante valable pour $k\geq0$ :
+	
+$$\frac{(r_{k},p_{k})^{2}}{(Ap_{k},p{k})(A^{-1}r_{k},r_{k})}\geq\frac{1}{cond(A)}\left(\frac{r_{k}}{\|r_{k}\|_{2}},\frac{p_{k}}{\|p_{k}\|_{2}}\right)^{2}$$
+\end{lemma}
+Ce lemme permet notamment le choix des directions de descente.
+
+\begin{theorem}
+Pour $\alpha_{k}$ optimal local, toute direction $p_{k}$ qui vérifie $\forall k\geq0$ :
+$$\left(\frac{r_{k}}{\|r_{k}\|_{2}},\frac{p_{k}}{\|p_{k}\|_{2}}\right)^{2}>0$$
+\end{theorem}
+Ce théorème implique que la suite $(x_{k})_{k\geq0}$ converge vers la solution $\overline{x}$ qui minimise $E(x)$.
+
+\subsection{Méthode du gradient conjugué}
+
+Recopier en gros le cours d'andré draux à partir de son introduction 2.3.1 page 44, 
+toutes les propriétés sans démonstrations ni définitions + dire la définition 2.3.5 + rappeler l'inégalité du conditionnement + rappeler la complexité de l'algorithme
+
+
+
+
 
 \chapter{Résolution numérique}
 
-\section{Méthode}
+\section{Algorithmes et langage utilisés}
 
-Expliquer la méthode numérique utilisée (fortran algo etc)
+L'algorithme du gradient conjugué a été implémenté en Fortran. Le choix du langage a été influencé par la facilité d'écrire certaines opérations vectorielles mathématiques en Fortran. L'ensemble des variables sont déclarées en double précision afin d'avoir le plus de chiffres significatifs (précision autour de $10^{-16}$). Un algorithme avec et sans perturbation de la matrice $A$ a été implémenté avec un test d’arrêt différent chacun.\\
 
-\section{Résultats}
+\begin{figure}[H]
+    \begin{minipage}[c]{.45\linewidth}
+        \centering
+        \captionsetup{justification=centering}
+        \includegraphics[width=0.6\textwidth]{./Images/Algo1}
+		\caption{Algorithme du gradient conjugué muni du test d'arrêt \textbf{t1}}
+    \end{minipage}
+    \hfill%
+    \begin{minipage}[c]{.45\linewidth}
+        \centering
+        \captionsetup{justification=centering}
+        \includegraphics[width=0.6\textwidth]{./Images/Algo2}
+		\caption{Algorithme du gradient conjugué muni du test d'arrêt \textbf{t2}}
+    \end{minipage}
+\end{figure}\vspace{0.3cm}
+
+Le vecteur initial $x_{0}$ a été initialisé au vecteur nul, la tolérance $\varepsilon$ a été fixée à $10^{-10}$ et le vecteur b est choisi tel que la solution du problème $Ax=b$ soit un vecteur contenant uniquement des $1$. En d'autres termes, $b_{i}$ est la résultante des colonnes de la ligne $i$ de la matrice $A$.\\
+
+L'ensemble des matrices testées (à une dimension près) se trouvent en Annexes.
+
+\section{Résultats obtenus}
 
 Convergence des $x_{n}$, convergence des résidus, p.s. des résidus qui forment bien une base, inégalité du conditionnement...
 
@@ -133,6 +228,8 @@ Convergence des $x_{n}$, convergence des résidus, p.s. des résidus qui forment
 \addcontentsline{toc}{chapter}{Conclusion}
 
 Dans la conclusion, vous devez commenter les résultats numériques par rapport á ce que l’on pouvait espérer au vu des résultats théoriques.
+
+Dire qu'avec une complexité comme celle ci (je crois que c'est O(n) ) le gradient conjugué est très apprécié dans des problèmes d'optimisation de grande taille.
 
 \chapter*{Annexes}
 \addcontentsline{toc}{chapter}{Annexes}
@@ -186,7 +283,7 @@ Dans la conclusion, vous devez commenter les résultats numériques par rapport 
 \end{figure}%\vspace{0.1cm}
 
 \begin{figure}[H]
-	\center
+	\centering
 	\includegraphics[width=0.17\textwidth]{./Images/W}
 	\caption*{Matrice de Wilson}
 	\addcontentsline{lof}{section}{Matrice de Wilson}
@@ -197,6 +294,8 @@ Dans la conclusion, vous devez commenter les résultats numériques par rapport 
 
 	[1] André Draux \textit{Analyse numérique}, poly, chapitre 2 \textit{Les méthodes de descente}.\\
 
-	[2] Maria Kazakova \textit{GM3 Analyse numérique I}, Année 2020-2021, section 1.2.4 \textit{Les méthodes de Krylov}
+	[2] Maria Kazakova \textit{GM3 Analyse numérique I}, Année 2020-2021, section 1.2.4\\ 
+	
+	[3] Daniel Kauth \textit{Les méthodes de Krylov} \textit{Optimisation numérique Méthodes du gradient conjugué linéaire}, chapitre 5.1, 5 novembre 2009.
 
 \end{document}

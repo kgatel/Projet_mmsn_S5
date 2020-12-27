@@ -180,14 +180,14 @@ Ce théorème implique que la suite $(x_{k})_{k\geq0}$ converge vers la solution
 \subsection{Méthode du gradient conjugué}
 
 Recopier en gros le cours d'andré draux à partir de son introduction 2.3.1 page 44, 
-toutes les propriétés sans démonstrations ni définitions + dire la définition 2.3.5 + rappeler l'inégalité du conditionnement + rappeler la complexité de l'algorithme
+toutes les propriétés sans démonstrations ni définitions + dire la définition 2.3.5 + rappeler l'inégalité du conditionnement + rappeler la formule de l'erreur relative + rappeler la complexité de l'algorithme
 
 
 
 
 
 \chapter{Résolution numérique}
-
+\addcontentsline{lof}{chapter}{Résolution numérique}
 \section{Algorithmes et langage utilisés}
 
 L'algorithme du gradient conjugué a été implémenté en Fortran. Le choix du langage a été influencé par la facilité d'écrire certaines opérations vectorielles mathématiques en Fortran. L'ensemble des variables sont déclarées en double précision afin d'avoir le plus de chiffres significatifs (précision autour de $10^{-16}$). Un algorithme avec et sans perturbation de la matrice $A$ a été implémenté avec un test d’arrêt différent chacun.\\
@@ -216,11 +216,178 @@ L'ensemble des matrices testées (à une dimension près) se trouvent en Annexes
 
 Convergence des $x_{n}$, convergence des résidus, p.s. des résidus qui forment bien une base, inégalité du conditionnement...
 
-\subsection{Sans perturbation}
+\subsection{Matrices sans perturbation}
+
+Les fichiers de résultats sont obtenus en entrant les données dans un fichier de données puis en donnant en entrée de l’exécutable ce fichier de donnée comme ci-dessous :
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\textwidth]{./Images/dif_4.res}
+	\caption{Exemple de fichier de résultat avec une matrice dif\_4 sans perturbation}
+\end{figure}
+
+Les propriétés des fichiers de résultat entre les deux tests étant similaires, nous décidons de travailler avec le \textbf{test d'arrêt 1} dans cette partie.
 
 
+\subsubsection{Matrices dif}
 
-\subsection{Avec perturbation}
+En petites dimensions la suite des $x_{k}$ convergent très rapidement vers la solution, la suite des résidus $r_{k}$ convergent vers 0 assez rapidement et l'estimation de l'erreur relative est très basse. Les résultats en basse dimensions sont peu intéressants.\\
+
+En grandes dimensions, nous observons davantage de résultats. En dimension 50, on observe une convergence de la suite $x_{k}$ plus lente vers la solution. \\
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[width=1\textwidth]{./Images/x_dif_50}
+	\caption{Vecteur $x_{k}$ à la $25^{eme}$ itération pour $dif_{50}$}
+\end{figure}\vspace{0.2cm}
+
+De même pour la suite des résidus $r_{k}$ qui elle converge à la même vitesse que les $x_{k}$. \\
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[width=1\textwidth]{./Images/r_dif_50}
+	\caption{Vecteur $r_{k}$ à la $26^{eme}$ itération pour $dif_{50}$}
+\end{figure}\vspace{0.2cm}
+
+On observe que les composantes du vecteur $r_{k}$ sont très proche de la précision de la machine qui se trouve autour de $10^{-16}$.
+
+Les produits scalaires entre les résidus sont de l'ordre de $10^{-17}$ qui montrent bien l'espace vectoriel engendré par ces derniers qui forment une base orthogonale.
+
+L'erreur relative est de l'ordre de $10^{-15}$ ce qui est très faible, et donc positif pour notre cas.\\
+
+Même en grande dimension, pour cette matrice les convergences sont bien respectées malgré la précision machine.
+
+\subsubsection{Matrice elec}
+
+La matrice étant de petite taille les $x_{k}$ convergent très rapidement vers la solution.\\
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{./Images/x_elec}
+	\caption{Vecteur $x_{k}$ à la $3^{eme}$ itération pour $elec$}
+\end{figure}\vspace{0.2cm}
+
+De même pour la suite $r_{k}$ qui convergent vers le vecteur nul :
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{./Images/r_elec}
+	\caption{Vecteurs $r_{k}$ jusqu'à la $4^{eme}$ itération pour $elec$}
+\end{figure}\vspace{0.2cm}
+
+En revanche certains produits scalaires sont éloignés de zéro ne formant pas une base orthogonale. 
+
+\begin{figure}[htb!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{./Images/ps_elec}
+	\caption{Produits scalaires entre les $r_{k}$ pour $elec$}
+\end{figure}\vspace{0.2cm}
+
+Cette observation est due aux vecteurs résidus $r_{2}$ et $r_{3}$ qui posent des problèmes d'orthogonalité.\\
+
+On remarque que l'erreur relative est très basse malgré tout.
+
+\subsubsection{Matrice elecmodif}
+
+Cette matrice n'étant pas définie positive il est inutile de l'étudier en profondeur afin de montrer la cohérence avec la partie mathématique attendue numériquement.
+
+Cependant ses propriétés sont étonnantes malgré sa non définie-positivité. En effet ses $x_{k}$ convergent vers la solution, ses vecteurs résidus $r_{k}$ convergent vers le vecteur nul.\\
+
+On retrouve les mêmes produits scalaires anormaux que la matrice elec causés par les vecteurs $r_{2}$ et $r_{3}$ :
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{./Images/ps_elecmodif}
+	\caption{Produits scalaires entre les $r_{k}$ pour $elecmodif$}
+\end{figure}\vspace{0.2cm}
+
+On remarque que l'erreur relative est également très basse.\\
+
+Même si la matrice n'est pas définie positive, on observe les mêmes propriétés que sa matrice d'origine elec numériquement.
+
+\subsubsection{Matrices de Hilbert}
+
+En dimension 6 la suite des $x_{k}$ et la suite des résidus convergent beaucoup moins rapidement que les matrices précédentes.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./Images/xr_H_6}
+	\caption{Convergence des suites $x_{k}$ et $r_{k}$ pour $H_{6}$}
+\end{figure}\vspace{0.2cm}
+
+En effet, pour les résidus nous sommes aux alentours de $10^{-12}$ au lieu de $10^{-16}$ dans les exemples précédents. La précision tourne autour de $10^{-5}$ pour le vecteur $x_{k}$ à partir de la $7^{ème}$ itération.\\
+
+Cependant les produits scalaires satisfont bien l'orthogonalité et l'erreur relative est environ $10^{-5}$ ce qui est plutôt élevé par rapport aux exemples précédents.\\
+
+En dimension plus élevée, nous observons les mêmes propriétés. Une convergence des $x_k$ et des $r_k$ assez lente, des produits scalaires au voisinage de zéro et une erreur relative du même ordre.
+
+\subsubsection{Matrice lap}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./Images/Fichier_res_lap_3}
+	\caption{Fichier résultat pour $lap_3$}
+\end{figure}\vspace{0.2cm}
+
+La suite des résidus $r_k$ convergent très rapidement vers la limite théorique. Cependant, pour la suite des $x_k$, certaines composantes convergent moins rapidement que d'autres ce qui explique une erreur relative bien au dessus de celles vu précédemment pour les autres matrices.\\
+
+Les produits scalaires sont tous vérifiés et égals à 0 à la précision machine près. L'espace de Krylov engendré par la base orthogonale des résidus $r_k$ pour cette matrice est bien vérifié numériquement
+
+\subsubsection{Matrices $tri_{alpha}$}
+
+Pour ces types de matrice, nous avons décidé de prendre des matrices de dimension 10 avec des $\alpha$ égalent à 2, 5 et 20.\\
+
+Pour les 3 matrices confondues, la convergence est parfaite pour le vecteur solution $x_k$ l'erreur relative. \\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./Images/x_tri}
+	\caption{Convergence parfaite de la suite $x_k$ à la $5^{ème}$ itération pour les matrices $tri_{alpha_{10}}$}
+\end{figure}\vspace{0.2cm}
+
+L'erreur relative est donc nulle pour l'ensemble de ces matrices.\\
+
+Nous observons également une convergence très rapide des résidus et des produits scalaires tous respectés.\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{./Images/ps_tri_20_10}
+	\caption{Convergence parfaite de la suite $x_k$ à la $5^{ème}$ itération pour les matrices $tri_{alpha_{10}}$}
+\end{figure}\vspace{0.2cm}
+
+La matrice étant très bien conditionnée, le choix du $alpha$ importe peu. Il doit simplement être supérieur à 1 de manière à ce que la matrice soit définie positive.
+
+\subsubsection{Matrice de Wilson}
+
+Pour cette matrice, certains résidus ont du mal à converger vers zéro. En particulier celui à la deuxième itération :\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./Images/r_W}
+	\caption{Suite des résidus $r_k$ pour $W$}
+\end{figure}\vspace{0.2cm}
+
+Ce manque de convergence pour certains de ces vecteurs impliquent des produits scalaires très éloignés de 0 et donc des résultats numériques ne permettant pas de vérifier les résultats mathématiques théoriques avec précision.\\
+
+Ce manque de convergence et ce manque de précision sont dus au conditionnement élevé de la matrice carrée de dimension 4.\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.2\textwidth]{./Images/Conditionnement_W}
+	\caption{Conditionnement de la matrice de Wilson}
+\end{figure}\vspace{0.2cm}
+
+Cependant la suite $x_k$ converge assez rapidement vers la solution malgré le conditionnement :\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./Images/x_W}
+	\caption{Vecteur solution $x_k$ à partir de la $4^{ème}$ itération pour $W$}
+\end{figure}\vspace{0.2cm}
+
+Enfin l'estimation de l'erreur relative est $10^{-11}$ ce qui est assez faible. 
+
+\subsection{Matrices avec perturbation}
+
 
 
 

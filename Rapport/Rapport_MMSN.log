@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.11.3)  24 DEC 2020 01:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.11.3)  27 DEC 2020 15:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -700,6 +700,19 @@ l.101 \listoffigures
 
 ] (./Rapport_MMSN.lof
 Package cleveref Info: loaded `french' language definitions on input line 1.
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 16.
+
+Missing character: There is no è in font cmr7!
+
+LaTeX Warning: Command \` invalid in math mode on input line 17.
+
+Missing character: There is no è in font cmr7!
+
+LaTeX Warning: Command \` invalid in math mode on input line 20.
+
+Missing character: There is no è in font cmr7!
 )
 \tf@lof=\write6
 \openout6 = `Rapport_MMSN.lof'.
@@ -781,12 +794,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 193--194
 
  []
 
-<./Images/Algo1.png, id=152, 195.73125pt x 228.855pt>
+<./Images/Algo1.png, id=182, 195.73125pt x 228.855pt>
 File: ./Images/Algo1.png Graphic file (type png)
 <use ./Images/Algo1.png>
 Package pdftex.def Info: ./Images/Algo1.png  used on input line 199.
 (pdftex.def)             Requested size: 119.76659pt x 140.03435pt.
-<./Images/Algo2.png, id=154, 195.73125pt x 228.855pt>
+<./Images/Algo2.png, id=184, 195.73125pt x 228.855pt>
 File: ./Images/Algo2.png Graphic file (type png)
 <use ./Images/Algo2.png>
 Package pdftex.def Info: ./Images/Algo2.png  used on input line 206.
@@ -796,81 +809,277 @@ Underfull \hbox (badness 10000) in paragraph at lines 211--212
 
  []
 
+<./Images/dif_4.res.png, id=185, 1030.85126pt x 577.15625pt>
+File: ./Images/dif_4.res.png Graphic file (type png)
+<use ./Images/dif_4.res.png>
+Package pdftex.def Info: ./Images/dif_4.res.png  used on input line 224.
+(pdftex.def)             Requested size: 332.68385pt x 186.26135pt.
 [6
 
- <./Images/Algo1.png> <./Images/Algo2.png>] [7
+ <./Images/Algo1.png> <./Images/Algo2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 233--234
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 235--236
+
+ []
+
+<./Images/x_dif_50.png, id=194, 1841.88126pt x 134.5025pt>
+File: ./Images/x_dif_50.png Graphic file (type png)
+<use ./Images/x_dif_50.png>
+Package pdftex.def Info: ./Images/x_dif_50.png  used on input line 239.
+(pdftex.def)             Requested size: 443.57848pt x 32.39207pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 243--244
+
+ []
+
+<./Images/r_dif_50.png, id=195, 1871.99374pt x 129.48375pt>
+File: ./Images/r_dif_50.png Graphic file (type png)
+<use ./Images/r_dif_50.png>
+Package pdftex.def Info: ./Images/r_dif_50.png  used on input line 247.
+(pdftex.def)             Requested size: 443.57848pt x 30.68156pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 255--256
+
+ []
+
+[7 <./Images/dif_4.res.png> <./Images/x_dif_50.png> <./Images/r_dif_50.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 261--262
+
+ []
+
+<./Images/x_elec.png, id=204, 681.54625pt x 19.07124pt>
+File: ./Images/x_elec.png Graphic file (type png)
+<use ./Images/x_elec.png>
+Package pdftex.def Info: ./Images/x_elec.png  used on input line 265.
+(pdftex.def)             Requested size: 354.86412pt x 9.92989pt.
+<./Images/r_elec.png, id=205, 729.72626pt x 95.35625pt>
+File: ./Images/r_elec.png Graphic file (type png)
+<use ./Images/r_elec.png>
+Package pdftex.def Info: ./Images/r_elec.png  used on input line 273.
+(pdftex.def)             Requested size: 354.86412pt x 46.37138pt.
+<./Images/ps_elec.png, id=206, 559.08875pt x 235.88126pt>
+File: ./Images/ps_elec.png Graphic file (type png)
+<use ./Images/ps_elec.png>
+Package pdftex.def Info: ./Images/ps_elec.png  used on input line 281.
+(pdftex.def)             Requested size: 354.86412pt x 149.72174pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--286
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 293--294
+
+ []
+
+<./Images/ps_elecmodif.png, id=207, 556.0775pt x 233.87375pt>
+File: ./Images/ps_elecmodif.png Graphic file (type png)
+<use ./Images/ps_elecmodif.png>
+Package pdftex.def Info: ./Images/ps_elecmodif.png  used on input line 299.
+(pdftex.def)             Requested size: 354.86412pt x 149.25043pt.
+[8 <./Images/x_elec.png> <./Images/r_elec.png> <./Images/ps_elec.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 303--304
+
+ []
+
+<./Images/xr_H_6.png, id=217, 1542.76375pt x 344.28625pt>
+File: ./Images/xr_H_6.png Graphic file (type png)
+<use ./Images/xr_H_6.png>
+Package pdftex.def Info: ./Images/xr_H_6.png  used on input line 313.
+(pdftex.def)             Requested size: 443.57848pt x 98.9894pt.
+
+LaTeX Warning: Command \` invalid in math mode on input line 317.
+
+Missing character: There is no è in font cmr7!
+
+Underfull \hbox (badness 10000) in paragraph at lines 317--318
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 319--320
+
+ []
+
+<./Images/Fichier_res_lap_3.png, id=218, 1796.7125pt x 596.2275pt>
+File: ./Images/Fichier_res_lap_3.png Graphic file (type png)
+<use ./Images/Fichier_res_lap_3.png>
+Package pdftex.def Info: ./Images/Fichier_res_lap_3.png  used on input line 327
+.
+(pdftex.def)             Requested size: 443.57848pt x 147.19148pt.
+[9 <./Images/ps_elecmodif.png> <./Images/xr_H_6.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 331--332
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 337--338
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--340
+
+ []
+
+<./Images/x_tri.png, id=226, 1722.435pt x 40.15pt>
+File: ./Images/x_tri.png Graphic file (type png)
+<use ./Images/x_tri.png>
+Package pdftex.def Info: ./Images/x_tri.png  used on input line 343.
+(pdftex.def)             Requested size: 443.57848pt x 10.3395pt.
+
+LaTeX Warning: Command \` invalid in math mode on input line 344.
+
+Missing character: There is no è in font cmr7!
+
+LaTeX Warning: Command \` invalid in math mode on input line 344.
+
+Missing character: There is no è in font cmr7!
+
+Underfull \hbox (badness 10000) in paragraph at lines 347--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 349--350
+
+ []
+
+<./Images/ps_tri_20_10.png, id=227, 552.0625pt x 381.425pt>
+File: ./Images/ps_tri_20_10.png Graphic file (type png)
+<use ./Images/ps_tri_20_10.png>
+Package pdftex.def Info: ./Images/ps_tri_20_10.png  used on input line 353.
+(pdftex.def)             Requested size: 221.78923pt x 153.23659pt.
+
+LaTeX Warning: Command \` invalid in math mode on input line 354.
+
+Missing character: There is no è in font cmr7!
+
+LaTeX Warning: Command \` invalid in math mode on input line 354.
+
+Missing character: There is no è in font cmr7!
+[10 <./Images/Fichier_res_lap_3.png> <./Images/x_tri.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 361--362
+
+ []
+
+<./Images/r_W.png, id=236, 1071.00125pt x 107.40125pt>
+File: ./Images/r_W.png Graphic file (type png)
+<use ./Images/r_W.png>
+Package pdftex.def Info: ./Images/r_W.png  used on input line 365.
+(pdftex.def)             Requested size: 443.57848pt x 44.48218pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--370
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--372
+
+ []
+
+<./Images/Conditionnement_W.png, id=237, 211.79124pt x 36.135pt>
+File: ./Images/Conditionnement_W.png Graphic file (type png)
+<use ./Images/Conditionnement_W.png>
+Package pdftex.def Info: ./Images/Conditionnement_W.png  used on input line 375
+.
+(pdftex.def)             Requested size: 88.71434pt x 15.13577pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--380
+
+ []
+
+<./Images/x_W.png, id=238, 912.40875pt x 20.075pt>
+File: ./Images/x_W.png Graphic file (type png)
+<use ./Images/x_W.png>
+Package pdftex.def Info: ./Images/x_W.png  used on input line 383.
+(pdftex.def)             Requested size: 443.57848pt x 9.75963pt.
+
+LaTeX Warning: Command \` invalid in math mode on input line 384.
+
+Missing character: There is no è in font cmr7!
+
+LaTeX Warning: Command \` invalid in math mode on input line 384.
+
+Missing character: There is no è in font cmr7!
+[11 <./Images/ps_tri_20_10.png> <./Images/r_W.png> <./Images/Conditionnement_W.
+png> <./Images/x_W.png>] [12] [13
 
 ]
-<./Images/elec.png, id=168, 135.50626pt x 54.2025pt>
+<./Images/elec.png, id=257, 135.50626pt x 54.2025pt>
 File: ./Images/elec.png Graphic file (type png)
 <use ./Images/elec.png>
-Package pdftex.def Info: ./Images/elec.png  used on input line 240.
+Package pdftex.def Info: ./Images/elec.png  used on input line 407.
 (pdftex.def)             Requested size: 102.02454pt x 40.81139pt.
-<./Images/elecmodif.png, id=169, 144.54pt x 55.20625pt>
+<./Images/elecmodif.png, id=258, 144.54pt x 55.20625pt>
 File: ./Images/elecmodif.png Graphic file (type png)
 <use ./Images/elecmodif.png>
-Package pdftex.def Info: ./Images/elecmodif.png  used on input line 247.
+Package pdftex.def Info: ./Images/elecmodif.png  used on input line 414.
 (pdftex.def)             Requested size: 102.02454pt x 38.96758pt.
-<./Images/dif_8.png, id=170, 307.1475pt x 145.54375pt>
+<./Images/dif_8.png, id=259, 307.1475pt x 145.54375pt>
 File: ./Images/dif_8.png Graphic file (type png)
 <use ./Images/dif_8.png>
-Package pdftex.def Info: ./Images/dif_8.png  used on input line 256.
+Package pdftex.def Info: ./Images/dif_8.png  used on input line 423.
 (pdftex.def)             Requested size: 204.04907pt x 96.68987pt.
-<./Images/H_5.png, id=171, 167.62625pt x 174.6525pt>
+<./Images/H_5.png, id=260, 167.62625pt x 174.6525pt>
 File: ./Images/H_5.png Graphic file (type png)
 <use ./Images/H_5.png>
-Package pdftex.def Info: ./Images/H_5.png  used on input line 263.
+Package pdftex.def Info: ./Images/H_5.png  used on input line 430.
 (pdftex.def)             Requested size: 122.43068pt x 127.56187pt.
-<./Images/lap_3.png, id=172, 246.9225pt x 166.6225pt>
+<./Images/lap_3.png, id=261, 246.9225pt x 166.6225pt>
 File: ./Images/lap_3.png Graphic file (type png)
 <use ./Images/lap_3.png>
-Package pdftex.def Info: ./Images/lap_3.png  used on input line 272.
+Package pdftex.def Info: ./Images/lap_3.png  used on input line 439.
 (pdftex.def)             Requested size: 183.64291pt x 123.92162pt.
-<./Images/tri_5_10.png, id=173, 186.6975pt x 180.675pt>
+<./Images/tri_5_10.png, id=262, 186.6975pt x 180.675pt>
 File: ./Images/tri_5_10.png Graphic file (type png)
 <use ./Images/tri_5_10.png>
-Package pdftex.def Info: ./Images/tri_5_10.png  used on input line 279.
+Package pdftex.def Info: ./Images/tri_5_10.png  used on input line 446.
 (pdftex.def)             Requested size: 122.43068pt x 118.4822pt.
-<./Images/W.png, id=174, 84.315pt x 71.26625pt>
+<./Images/W.png, id=263, 84.315pt x 71.26625pt>
 File: ./Images/W.png Graphic file (type png)
 <use ./Images/W.png>
-Package pdftex.def Info: ./Images/W.png  used on input line 287.
+Package pdftex.def Info: ./Images/W.png  used on input line 454.
 (pdftex.def)             Requested size: 75.40752pt x 63.73883pt.
- [8
+ [14
 
  <./Images/elec.png> <./Images/elecmodif.png> <./Images/dif_8.png> <./Images/H_
 5.png> <./Images/lap_3.png> <./Images/tri_5_10.png> <./Images/W.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 295--296
+Underfull \hbox (badness 10000) in paragraph at lines 462--463
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 297--298
+Underfull \hbox (badness 10000) in paragraph at lines 464--465
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 301.
-[9
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 468.
+[15
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 301.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 468.
  (./Rapport_MMSN.aux
 Package cleveref Info: loaded `french' language definitions on input line 25.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 301.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 301.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 468.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 468.
 Package rerunfilecheck Info: File `Rapport_MMSN.out' has not changed.
-(rerunfilecheck)             Checksum: DFB7ABF2AB8C6003794486F52F7FF276;1016.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 301.
+(rerunfilecheck)             Checksum: 968C34906ECF0DD2F2F12EDA26779768;1036.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 468.
  ) 
 Here is how much of TeX's memory you used:
- 14948 strings out of 481239
- 235746 string characters out of 5920377
- 564089 words of memory out of 5000000
- 29915 multiletter control sequences out of 15000+600000
+ 15091 strings out of 481239
+ 238690 string characters out of 5920377
+ 566089 words of memory out of 5000000
+ 30015 multiletter control sequences out of 15000+600000
  550672 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,8n,42p,580b,578s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,8n,42p,580b,582s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
@@ -893,10 +1102,10 @@ texmf/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf/fonts/type1/pu
 blic/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm12
 00.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/t
 exmf/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on Rapport_MMSN.pdf (10 pages, 383131 bytes).
+Output written on Rapport_MMSN.pdf (16 pages, 712058 bytes).
 PDF statistics:
- 279 PDF objects out of 1000 (max. 8388607)
- 218 compressed objects within 3 object streams
- 34 named destinations out of 1000 (max. 500000)
- 176 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 375 PDF objects out of 1000 (max. 8388607)
+ 280 compressed objects within 3 object streams
+ 61 named destinations out of 1000 (max. 500000)
+ 246 words of extra memory for PDF output out of 10000 (max. 10000000)
 

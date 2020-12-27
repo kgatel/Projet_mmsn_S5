@@ -9,8 +9,15 @@
 \contentsline {chapter}{\numberline {2}Résolution numérique}{6}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Algorithmes et langage utilisés}{6}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Résultats obtenus}{6}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Sans perturbation}{6}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Avec perturbation}{6}{subsection.2.2.2}%
-\contentsline {chapter}{Conclusion}{7}{chapter*.5}%
-\contentsline {chapter}{Annexes}{8}{chapter*.6}%
-\contentsline {chapter}{Bibliographie}{9}{chapter*.11}%
+\contentsline {subsection}{\numberline {2.2.1}Matrices sans perturbation}{6}{subsection.2.2.1}%
+\contentsline {subsubsection}{Matrices dif}{7}{subsubsection*.6}%
+\contentsline {subsubsection}{Matrice elec}{8}{subsubsection*.9}%
+\contentsline {subsubsection}{Matrice elecmodif}{8}{subsubsection*.13}%
+\contentsline {subsubsection}{Matrices de Hilbert}{9}{subsubsection*.15}%
+\contentsline {subsubsection}{Matrice lap}{10}{subsubsection*.17}%
+\contentsline {subsubsection}{Matrices $tri_{alpha}$}{10}{subsubsection*.19}%
+\contentsline {subsubsection}{Matrice de Wilson}{11}{subsubsection*.22}%
+\contentsline {subsection}{\numberline {2.2.2}Matrices avec perturbation}{12}{subsection.2.2.2}%
+\contentsline {chapter}{Conclusion}{13}{chapter*.26}%
+\contentsline {chapter}{Annexes}{14}{chapter*.27}%
+\contentsline {chapter}{Bibliographie}{15}{chapter*.32}%

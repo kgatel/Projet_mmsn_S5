@@ -27,9 +27,12 @@
 \usepackage{listings}
 \usepackage{cleveref}
 
+
 \newtheorem{theorem}{Théorème}[chapter]
 \newtheorem{corollary}{Corollaire}[theorem]
 \newtheorem{lemma}[theorem]{Lemme}
+\newtheorem{proposition}{Propriété}[theorem]
+\newtheorem{remark}{Remarque}[theorem]
 
 \renewcommand{\lstlistingname}{Code}
 %\renewcommand{\figurename}{Fig.}
@@ -178,10 +181,77 @@ $$\left(\frac{r_{k}}{\|r_{k}\|_{2}},\frac{p_{k}}{\|p_{k}\|_{2}}\right)^{2}>0$$
 Ce théorème implique que la suite $(x_{k})_{k\geq0}$ converge vers la solution $\overline{x}$ qui minimise $E(x)$.
 
 \subsection{Méthode du gradient conjugué}
+\subsubsection{Introduction}
 
 Recopier en gros le cours d'andré draux à partir de son introduction 2.3.1 page 44, 
 toutes les propriétés sans démonstrations ni définitions + dire la définition 2.3.5 + rappeler l'inégalité du conditionnement + rappeler la formule de l'erreur relative + rappeler la complexité de l'algorithme
 
+On prend les $\alpha_{k}=$ minimum local, alors $(p_{k-1},r_{k})$=
+0. On cherche les $p_{k}$ dans le plan $(r_{k},p_{k-1}$).
+
+on pose $p_{k}=r_{k}+\beta_{k}p_{k-1}$
+
+$\beta_{k}$sera déterminé de telle façon que le facteur de réduction
+de l'erreur soit maximal. On a $E(x_{k+1})=E(x_{k})*(1-\gamma_{k}).$
+On choisit $\beta_{k}$pour que $\gamma_{k}$soit maximum.
+
+comme $(r_{k},p_{k})=(r_{k},r_{k})+\beta_{k}(r_{k},p_{k-1})=||r_{k}||_{2}^{2}$ (on
+prend $p_{0}=$r$_{0}(\beta{}_{0}=0)$ pour que la relation soit vraie
+$\forall k\geq0$), $\gamma_{k}$ sera maximum, si $(Ap_{k},p_{k})$
+est minimum.
+
+\begin{align*}
+	(Ap_{k},p_{k}) & =(A(r_{k}+\beta_{k}p_{k-1}),r_{k}+\beta_{k}p_{k-1})\\
+	& =\beta_{k}^{2}(Ap_{k-1},p_{k-1})+2\beta_{k}(Ap_{k-1},r_{k})+(Ar_{k},r_{k}).
+\end{align*}
+
+le trinôme est donc minimal pour $\beta_{k}=-\frac{(Ap_{k-1},r_{k})}{(Ap_{k-1},p_{k-1})}$.\\
+
+Cette valeur de $\beta_{k}$correspond aussi au point d'annulation
+de la dérivée. On obtient donc :
+
+$$\beta_{k}(Ap_{k-1},p_{k-1})+(Ap_{k-1},r_{k})=(Ap_{k-1},r_{k}+\beta_{k}p_{k-1})=(Ap_{k-1},p_{k})=0$$
+
+Comme A est symétrique définie positive, (Au,v) est un produit scalaire
+$(u,v)_{A}$. Par conséquent deux vecteurs A-conjugués sont orthogonaux
+pour ce produit scalaire.
+
+\begin{proposition}
+Si $r_{i}\neq0$ pour i=0,...,k alors :
+\item [{i)}] $(r_{k+1},r_{k})=0$ pour $k\geq0$
+\item [{ii)}] $\beta_{0}=0,\beta_{k}=\frac{||r_{k}||^{2}}{||r_{k-1}||^{2}}$
+pour $k\geq1$
+\end{proposition}
+
+\begin{remark}
+comme $2r_{k}=-g_{k},$où $-g_{k}$ est le gradient de la fonctionelle,
+alors :
+
+\[
+\beta_{k}=\frac{||g_{k}||^{2}}{||g_{k-1}||^{2}}
+\]
+
+\end{remark}
+
+\subsubsection{L'algorithme}
+
+\begin{center}
+	\begin{tabular}{|c|}
+		\hline 
+		On initialise :$\begin{cases}
+			x_{0}\\
+			p_{0}=r_{0}=b-Ax_{0}
+		\end{cases}$P\tabularnewline
+		our k=0,1...$\begin{cases}
+			\alpha_{k}= & \frac{||r_{k}||^{2}}{(Ap_{k},p_{k})}\\
+			x_{k+1}= & x_{k}+\alpha_{k}p_{k}\\
+			r_{k+1}= & r_{k}-\alpha_{k}Ap_{k}\\
+			\beta_{k+1}= & \frac{||r_{k+1}||^{2}}{||r_{k}||^{2}}\\
+			p_{k+1}= & r_{k+1}+\beta_{k+1}p_{k}
+		\end{cases}$\tabularnewline
+		\hline 
+	\end{tabular}
+\end{center}
 
 
 

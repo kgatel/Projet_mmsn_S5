@@ -23,6 +23,7 @@
 \usepackage{tabto}
 \usepackage{comment} 
 \usepackage{amsthm}
+\usepackage{ulem}
 
 \usepackage{listings}
 \usepackage{cleveref}
@@ -33,6 +34,7 @@
 \newtheorem{lemma}[theorem]{Lemme}
 \newtheorem{proposition}{Propriété}[theorem]
 \newtheorem{remark}{Remarque}[theorem]
+\newtheorem{definition}{Définition}[theorem]
 
 \renewcommand{\lstlistingname}{Code}
 %\renewcommand{\figurename}{Fig.}
@@ -253,8 +255,33 @@ alors :
 	\end{tabular}
 \end{center}
 
+\uline{Complexité :} Si on prend N le nombre d'itérations on évaluera
+la compléxité de cet algorithme à environ $2N^{3}$. Ce qui reste
+important en comparaison l'algorithme de la méthode de Choleski possède
+une complexité de $\frac{N^{3}}{3}$ ce qui est nettement inférieur
+pour le même type de matrice. 
 
+Une solution à cela serait de préconditionner la matrice afin de réduire
+considérablement le nombres d'itérations et de cette façon on aurait
+alors l'une des méthodes les mieux adapté à la résolution de systèmes
+linéaires dont la matrice est symétrique définie positive.
+\begin{definition}
+	L'espace vectoriel $k_{k}=V(r_{0},...,A^{k-1}r_{0})$est appelé espace
+	de Krylov
+	\[
+	$$Les $r_{i}=0,...,k-1$ forment une base orthogonale de cet espace.$$
+	\]
+\end{definition}
 
+\begin{theorem}
+	L'inégalité du conditionnement :
+	\[
+	\frac{||\delta X||_{q}}{||X||_{q}}\leq cond_{q}(A)*\frac{||\delta A||_{q}}{||A||_{q}}
+	\]
+
+\end{theorem}
+Cette inégalité nous dit que l'erreur relative sur la solution X doit être inférieur au conditionnement de la matrice A multiplié par la norme de la perturbation $\delta$A sur la norme de A. 
+Dans notre cas on prendra la norme infini pour q. Cette inégalité n'est présente et analysée uniquement dans le cas de résolution de systèmes avec perturbations 
 
 \chapter{Résolution numérique}
 \addcontentsline{lof}{chapter}{Résolution numérique}
@@ -458,7 +485,17 @@ Enfin l'estimation de l'erreur relative est $10^{-11}$ ce qui est assez faible.
 
 \subsection{Matrices avec perturbation}
 
-A toi de jouer beau goss 
+A toi de jouer beau goss \\
+De même Les fichiers de résultats sont obtenus en entrant les données dans un fichier de données puis en donnant en entrée de l’exécutable ce fichier de donnée qui contient en plus la matrice de perturbation $\delta$A comme ci-dessous :
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./Images/dif_6_1.res}
+	\caption{Exemple de fichier de résultat avec une matrice dif\_6 avec perturbation}
+\end{figure}
+
+Les propriétés des fichiers de résultat entre les deux tests étant similaires, nous décidons de travailler avec le \textbf{test d'arrêt 2} dans cette partie.
+
+\subsection{Matrices dif}
 
 
 \chapter*{Conclusion}

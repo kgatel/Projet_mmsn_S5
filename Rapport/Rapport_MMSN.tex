@@ -495,8 +495,94 @@ De même Les fichiers de résultats sont obtenus en entrant les données dans un
 
 Les propriétés des fichiers de résultat entre les deux tests étant similaires, nous décidons de travailler avec le \textbf{test d'arrêt 2} dans cette partie.
 
-\subsection{Matrices dif}
+\subsubsection{Matrices dif}
+En petites dimensions la suite des $x_{k}$
+converge très rapidement vers la solution malgré les perturbations. On notera que pour ces matrices le conditionnements est très faible en petite dimension.\\
+Plus intéressant observons les résultats obtenus en dimension 50 :\\
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.23\textwidth]{./Images/dif_50_1.res}
+	\caption{Résultats obtenus pour la matrice dif en dimension 50}
+\end{figure}
+
+On observe que la suite des $x_{k}$ converge au bout de la $25^{eme}$ itération. L'erreur relative reste très faible et l'inégalité du conditionnement est respectée.\\
+On voit donc que même en grande dimension on converge bien et tout de même rapidement vers la solution.
+
+\subsubsection{Matrice elec}
+la matrice est petite de dimension et son conditionnement assez faible. La suite des $x_{k}$ converge en seulement 3 itérations.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./Images/elec_1.res}
+	\caption{Résultats obtenus pour la matrice elec}
+\end{figure}
+
+L'erreur relative est toujours très faible et l'inégalité du conditionnement est respectée, cette matrice ne pose donc pas de problème malgré les perturbations.
+
+\subsubsection{Matrice elecmodif}
+
+Cette matrice reste la même que la précédente mais on a mis un signe moins sur le premier élément de la matrice. Elle reste donc symétrique mais elle n'est plus définie positive car son premier mineur est négatif. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./Images/elecmodif_1.res}
+	\caption{Résultats obtenus pour la matrice elecmodif}
+\end{figure}
+
+Malgré cela on observe de bon résultats notamment avec l'erreur relative faible et la suite des $x_{k}$ qui converge aussi vite. L'inégalité du conditionnement est elle aussi respectée.
+
+\subsubsection{Matrices de Hilberts}
+
+Ces Matrices sont déjà plus compliqués à utiliser car elles possèdent un grand conditionnement. De plus en y ajoutant des perturbations cela n'arrange pas les choses. En dimension 4 cela se passe encore plutôt bien mais au-delà on observe des complications.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./Images/H_6_1.res}
+	\caption{Résultats obtenus pour la matrice de Hilbert en dimension 6 }
+\end{figure}
+
+On observe bien une lente convergences des $x_{k}$ et une erreur relative élevée. La même chose se produit en dimension supérieur mais en dimension 6 on se rend compte que l'inégalité du conditionnement n'est pas respectée étonnamment. En effet l'erreur relative est supérieure au membre de droite de l'inégalité. La différence est à $10^{-2}$ près.\\
+Cela est dû au conditionnement qui est plutôt élevé et qui rend compliqué les calculs en flottants.
+
+\subsubsection{Matrice lap} 
+
+On prendra la matrice lap en dimension 9 :\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./Images/lap_1.res}
+	\caption{Résultats obtenus pour la matrice lap}
+\end{figure}
+
+La solution converge très vite mais certaines coordonnées des $x_{k}$ convergent mal ce qui entraîne une grosse erreur relative. De ce fait l'inégalité du conditionnement n'est une nouvelle fois pas respectée.
+
+\subsubsection{Matrices $tri_{alpha}$}
+
+Comme précédemment nous avons pris cette matrice pour des valeurs de $\alpha$ telles que 2,5 et 20 en dimension 10.\\
+Pour les 3 matrices les résultats sont excellent malgré les perturbations.\\
+Regardons plus en détail pour $\alpha$=5
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./Images/tri_5_1.res}
+	\caption{Résultats obtenus pour la matrice $tri_{5}$}
+\end{figure}
+
+On voit que la suite converge en 5 itérations, que l'erreur relative est très faible et que l'inégalité du conditionnement est respectée.\\
+On pouvait s'attendre à de telles résultats en observant la valeur du conditionnement qui vaut 1,5
+
+\subsubsection{Matrice de Wilson}
+
+Le conditionnement de cette matrice reste assez élevé mais malgré tout on obtient des résultats plutôt bon :\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{./Images/W_1.res}
+	\caption{Résultats obtenus pour la matrice de Wilson}
+\end{figure}
+
+On peut voir que malgré tout la suite converge assez vite et que l'inégalité du conditionnement est respectée.
 
 \chapter*{Conclusion}
 \addcontentsline{toc}{chapter}{Conclusion}

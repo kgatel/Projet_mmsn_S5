@@ -256,10 +256,10 @@ alors :
 \end{center}
 
 \uline{Complexité :} Si on prend N le nombre d'itérations on évaluera
-la compléxité de cet algorithme à environ $2N^{3}$. Ce qui reste
-important en comparaison l'algorithme de la méthode de Choleski possède
-une complexité de $\frac{N^{3}}{3}$ ce qui est nettement inférieur
-pour le même type de matrice. 
+le nombre d'opérations de cet algorithme à environ $2N^{3}$. Ce qui reste
+important en comparaison l'algorithme de la méthode de Choleski qui possède
+un nombre inférieur de $\frac{N^{3}}{3}$ 
+pour le même type de matrice. La complexité de cet algorithme est de O(n).
 
 Une solution à cela serait de préconditionner la matrice afin de réduire
 considérablement le nombres d'itérations et de cette façon on aurait
@@ -485,7 +485,6 @@ Enfin l'estimation de l'erreur relative est $10^{-11}$ ce qui est assez faible.
 
 \subsection{Matrices avec perturbation}
 
-A toi de jouer beau goss \\
 De même Les fichiers de résultats sont obtenus en entrant les données dans un fichier de données puis en donnant en entrée de l’exécutable ce fichier de donnée qui contient en plus la matrice de perturbation $\delta$A comme ci-dessous :
 \begin{figure}[H]
 	\centering
@@ -493,6 +492,12 @@ De même Les fichiers de résultats sont obtenus en entrant les données dans un
 	\caption{Exemple de fichier de résultat avec une matrice dif\_6 avec perturbation}
 \end{figure}
 
+les coefficients de $\delta$A sont formés de la façon suivante :
+\[
+\delta_{ij}=A_{ij}*10^{-n_{ij}}*\epsilon_{ij}
+\]
+
+avec : $n_{ij}\in\{13;14;15\}$ $\epsilon_{ij}\in\{-1;0;1\}$\\
 Les propriétés des fichiers de résultat entre les deux tests étant similaires, nous décidons de travailler avec le \textbf{test d'arrêt 2} dans cette partie.
 
 \subsubsection{Matrices dif}
@@ -587,9 +592,16 @@ On peut voir que malgré tout la suite converge assez vite et que l'inégalité 
 \chapter*{Conclusion}
 \addcontentsline{toc}{chapter}{Conclusion}
 
-Dans la conclusion, vous devez commenter les résultats numériques par rapport á ce que l’on pouvait espérer au vu des résultats théoriques.
+Pour conclure on a pu observer que dans la grande majorité des cas l'algorithme du gradient conjugué donnait bien les résultats attendus théoriquement. La suite des $x_{k}$ converge bien souvent rapidement vers la solution avec un nombre d'itérations inférieur à la dimension de la matrice A.\\
 
-Dire qu'avec une complexité comme celle ci (je crois que c'est O(n) ) le gradient conjugué est très apprécié dans des problèmes d'optimisation de grande taille.
+En ce qui concerne les matrices sans perturbations la principale difficulté qui ressort est la convergence des vecteurs $r_{k}$ qui n'est pas toujours parfaite. On observe alors des produits scalaires entre des vecteurs $r_{k}$ qui sont non nuls, alors que théoriquement ils forment une bas orthogonale de l'espace de Krylov et donc leur produit scalaire devrait être toujours nuls. Le problème arrive souvent lorsque les matrices sont mal conditionnées. Néanmoins la majorité des produits scalaires approches la précision machine qui est de $10^{-16}$. Le fait que le calcul soit fait en flottant et non en réel peut expliquer ces légères différences avec ce qu'on attend théoriquement.\\
+
+Pour les matrices avec perturbations, généralement cela ne pose pas de problèmes lorsque la matrice est bien conditionnée. On observe parfois un ralentissement dans la convergence des $x_{k}$ mais rien de bien grave. Cependant quand le conditionnement devient élevé il arrive que l'inégalité du conditionnement ne soit pas respectée à la fin des itérations. La différence entre les deux membres de l'inégalité est généralement assez faible tout de même et l'utilisation des flottants à la place des réels est peut être responsable de cette erreur parfois.\\
+
+La complexité de l'algorithme du gradient conjugué étant de O(n) cela en fait un très bon choix pour des problèmes d'optimisation de grande taille.\\
+Associé avec un préconditionnement de la matrice A l'algorithme du gradient conjugué donne donc d'excellent résultats rapidement dans le cas où la matrice A est symétrique définie positive. \\
+
+Ce projet nous aura permis de découvrir plus en détail une méthode de résolutions de système linéaire qu'est le gradient conjugué en la mettant en pratique à l'aide d'un ordinateur. Nous avons pu observer et analyser les résultats numériques obtenues et nous rendre compte des difficultés auxquelles nous pouvons faire face lors de l'utilisation d'un tel algorithme dans un problème d'optimisation.
 
 \chapter*{Annexes}
 \addcontentsline{toc}{chapter}{Annexes}

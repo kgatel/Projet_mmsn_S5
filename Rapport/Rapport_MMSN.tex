@@ -185,9 +185,6 @@ Ce théorème implique que la suite $(x_{k})_{k\geq0}$ converge vers la solution
 \subsection{Méthode du gradient conjugué}
 \subsubsection{Introduction}
 
-Recopier en gros le cours d'andré draux à partir de son introduction 2.3.1 page 44, 
-toutes les propriétés sans démonstrations ni définitions + dire la définition 2.3.5 + rappeler l'inégalité du conditionnement + rappeler la formule de l'erreur relative + rappeler la complexité de l'algorithme
-
 On prend les $\alpha_{k}=$ minimum local, alors $(p_{k-1},r_{k})$=
 0. On cherche les $p_{k}$ dans le plan $(r_{k},p_{k-1}$).
 
@@ -280,8 +277,8 @@ linéaires dont la matrice est symétrique définie positive.
 	\]
 
 \end{theorem}
-Cette inégalité nous dit que l'erreur relative sur la solution X doit être inférieur au conditionnement de la matrice A multiplié par la norme de la perturbation $\delta$A sur la norme de A. 
-Dans notre cas on prendra la norme infini pour q. Cette inégalité n'est présente et analysée uniquement dans le cas de résolution de systèmes avec perturbations 
+Cette inégalité nous dit que l'erreur relative sur la solution X doit être inférieure au conditionnement de la matrice A multiplié par la norme de la perturbation $\delta$A sur la norme de A. 
+Dans notre cas on prendra la norme infinie pour q. Cette inégalité n'est présente et analysée uniquement dans le cas de résolution de systèmes avec perturbations 
 
 \chapter{Résolution numérique}
 \addcontentsline{lof}{chapter}{Résolution numérique}
@@ -310,8 +307,6 @@ Le vecteur initial $x_{0}$ a été initialisé au vecteur nul, la tolérance $\v
 L'ensemble des matrices testées (à une dimension près) se trouvent en Annexes.
 
 \section{Résultats obtenus}
-
-Convergence des $x_{n}$, convergence des résidus, p.s. des résidus qui forment bien une base, inégalité du conditionnement...
 
 \subsection{Matrices sans perturbation}
 
@@ -485,7 +480,7 @@ Enfin l'estimation de l'erreur relative est $10^{-11}$ ce qui est assez faible.
 
 \subsection{Matrices avec perturbation}
 
-De même Les fichiers de résultats sont obtenus en entrant les données dans un fichier de données puis en donnant en entrée de l’exécutable ce fichier de donnée qui contient en plus la matrice de perturbation $\delta$A comme ci-dessous :
+Les fichiers de résultats sont obtenus en entrant les données dans un fichier de données puis en donnant en entrée de l’exécutable ce fichier de donnée qui contient en plus la matrice de perturbation $\delta$A comme ci-dessous :
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{./Images/dif_6_1.res}
@@ -502,7 +497,7 @@ Les propriétés des fichiers de résultat entre les deux tests étant similaire
 
 \subsubsection{Matrices dif}
 En petites dimensions la suite des $x_{k}$
-converge très rapidement vers la solution malgré les perturbations. On notera que pour ces matrices le conditionnements est très faible en petite dimension.\\
+converge très rapidement vers la solution malgré les perturbations. On notera que pour ces matrices le conditionnement est très faible en petite dimension.\\
 Plus intéressant observons les résultats obtenus en dimension 50 :\\
 
 \begin{figure}[H]
@@ -515,7 +510,7 @@ On observe que la suite des $x_{k}$ converge au bout de la $25^{eme}$ itération
 On voit donc que même en grande dimension on converge bien et tout de même rapidement vers la solution.
 
 \subsubsection{Matrice elec}
-la matrice est petite de dimension et son conditionnement assez faible. La suite des $x_{k}$ converge en seulement 3 itérations.
+La matrice est petite de dimension et son conditionnement assez faible. La suite des $x_{k}$ converge en seulement 3 itérations.
 
 \begin{figure}[H]
 	\centering
@@ -535,11 +530,11 @@ Cette matrice reste la même que la précédente mais on a mis un signe moins su
 	\caption{Résultats obtenus pour la matrice elecmodif}
 \end{figure}
 
-Malgré cela on observe de bon résultats notamment avec l'erreur relative faible et la suite des $x_{k}$ qui converge aussi vite. L'inégalité du conditionnement est elle aussi respectée.
+Malgré cela on observe de bons résultats notamment avec l'erreur relative faible et la suite des $x_{k}$ qui converge aussi vite. L'inégalité du conditionnement est elle aussi respectée.
 
 \subsubsection{Matrices de Hilberts}
 
-Ces Matrices sont déjà plus compliqués à utiliser car elles possèdent un grand conditionnement. De plus en y ajoutant des perturbations cela n'arrange pas les choses. En dimension 4 cela se passe encore plutôt bien mais au-delà on observe des complications.
+Ces matrices sont déjà plus compliquées à utiliser car elles possèdent un grand conditionnement. De plus en y ajoutant des perturbations cela n'arrange pas les choses. En dimension 4 cela se passe encore plutôt bien mais au-delà on observe des complications.
 
 \begin{figure}[H]
 	\centering
@@ -548,7 +543,7 @@ Ces Matrices sont déjà plus compliqués à utiliser car elles possèdent un gr
 \end{figure}
 
 On observe bien une lente convergences des $x_{k}$ et une erreur relative élevée. La même chose se produit en dimension supérieur mais en dimension 6 on se rend compte que l'inégalité du conditionnement n'est pas respectée étonnamment. En effet l'erreur relative est supérieure au membre de droite de l'inégalité. La différence est à $10^{-2}$ près.\\
-Cela est dû au conditionnement qui est plutôt élevé et qui rend compliqué les calculs en flottants.
+Cela est dû au conditionnement qui est plutôt élevé et qui rend compliqués les calculs en flottant.
 
 \subsubsection{Matrice lap} 
 
@@ -565,8 +560,8 @@ La solution converge très vite mais certaines coordonnées des $x_{k}$ converge
 \subsubsection{Matrices $tri_{alpha}$}
 
 Comme précédemment nous avons pris cette matrice pour des valeurs de $\alpha$ telles que 2,5 et 20 en dimension 10.\\
-Pour les 3 matrices les résultats sont excellent malgré les perturbations.\\
-Regardons plus en détail pour $\alpha$=5
+Pour les 3 matrices les résultats sont excellents malgré les perturbations.\\
+Regardons plus en détail pour $\alpha=5$ :
 
 \begin{figure}[H]
 	\centering
@@ -575,11 +570,11 @@ Regardons plus en détail pour $\alpha$=5
 \end{figure}
 
 On voit que la suite converge en 5 itérations, que l'erreur relative est très faible et que l'inégalité du conditionnement est respectée.\\
-On pouvait s'attendre à de telles résultats en observant la valeur du conditionnement qui vaut 1,5
+On pouvait s'attendre à de telles résultats en observant la valeur du conditionnement qui vaut 1,5.
 
 \subsubsection{Matrice de Wilson}
 
-Le conditionnement de cette matrice reste assez élevé mais malgré tout on obtient des résultats plutôt bon :\\
+Le conditionnement de cette matrice reste assez élevé mais malgré tout, on obtient des résultats plutôt bons :\\
 
 \begin{figure}[H]
 	\centering
@@ -594,14 +589,14 @@ On peut voir que malgré tout la suite converge assez vite et que l'inégalité 
 
 Pour conclure on a pu observer que dans la grande majorité des cas l'algorithme du gradient conjugué donnait bien les résultats attendus théoriquement. La suite des $x_{k}$ converge bien souvent rapidement vers la solution avec un nombre d'itérations inférieur à la dimension de la matrice A.\\
 
-En ce qui concerne les matrices sans perturbations la principale difficulté qui ressort est la convergence des vecteurs $r_{k}$ qui n'est pas toujours parfaite. On observe alors des produits scalaires entre des vecteurs $r_{k}$ qui sont non nuls, alors que théoriquement ils forment une bas orthogonale de l'espace de Krylov et donc leur produit scalaire devrait être toujours nuls. Le problème arrive souvent lorsque les matrices sont mal conditionnées. Néanmoins la majorité des produits scalaires approches la précision machine qui est de $10^{-16}$. Le fait que le calcul soit fait en flottant et non en réel peut expliquer ces légères différences avec ce qu'on attend théoriquement.\\
+En ce qui concerne les matrices sans perturbations, la principale difficulté qui ressort est la convergence des vecteurs $r_{k}$ qui n'est pas toujours parfaite. On observe alors des produits scalaires entre des vecteurs $r_{k}$ qui sont non nuls, alors que théoriquement ils forment une bas orthogonale de l'espace de Krylov et donc leur produit scalaire devrait être toujours nul. Le problème arrive souvent lorsque les matrices sont mal conditionnées. Néanmoins, la majorité des produits scalaires approchent la précision machine qui est de $10^{-16}$. Le fait que le calcul soit fait en flottant et non en réel explique ces légères différences avec ce qu'on attend théoriquement.\\
 
-Pour les matrices avec perturbations, généralement cela ne pose pas de problèmes lorsque la matrice est bien conditionnée. On observe parfois un ralentissement dans la convergence des $x_{k}$ mais rien de bien grave. Cependant quand le conditionnement devient élevé il arrive que l'inégalité du conditionnement ne soit pas respectée à la fin des itérations. La différence entre les deux membres de l'inégalité est généralement assez faible tout de même et l'utilisation des flottants à la place des réels est peut être responsable de cette erreur parfois.\\
+Pour les matrices avec perturbations, généralement cela ne pose pas de problème lorsque la matrice est bien conditionnée. On observe parfois un ralentissement dans la convergence des $x_{k}$. Cependant quand le conditionnement devient élevé, il arrive que l'inégalité du conditionnement ne soit pas respectée à la fin des itérations. La différence entre les deux membres de l'inégalité est généralement assez faible tout de même et l'utilisation des flottants à la place des réels peut être responsable de cette erreur.\\
 
-La complexité de l'algorithme du gradient conjugué étant de O(n) cela en fait un très bon choix pour des problèmes d'optimisation de grande taille.\\
-Associé avec un préconditionnement de la matrice A l'algorithme du gradient conjugué donne donc d'excellent résultats rapidement dans le cas où la matrice A est symétrique définie positive. \\
+La complexité de l'algorithme du gradient conjugué étant de O(n) cela en fait un très bon choix pour des problèmes d'optimisation de grandes tailles.\\
+Associé avec un préconditionnement de la matrice A, l'algorithme du gradient conjugué donne d'excellents résultats dans le cas où la matrice A est symétrique définie positive. \\
 
-Ce projet nous aura permis de découvrir plus en détail une méthode de résolutions de système linéaire qu'est le gradient conjugué en la mettant en pratique à l'aide d'un ordinateur. Nous avons pu observer et analyser les résultats numériques obtenues et nous rendre compte des difficultés auxquelles nous pouvons faire face lors de l'utilisation d'un tel algorithme dans un problème d'optimisation.
+Ce projet nous aura permis de découvrir plus en détail une méthode de résolution de systèmes linéaires qu'est le gradient conjugué en la mettant en pratique à l'aide d'un ordinateur. Nous avons pu observer et analyser les résultats numériques obtenus et nous rendre compte des difficultés auxquelles nous pouvons faire face lors de l'utilisation d'un tel algorithme dans un problème d'optimisation.
 
 \chapter*{Annexes}
 \addcontentsline{toc}{chapter}{Annexes}
